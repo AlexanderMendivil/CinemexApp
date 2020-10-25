@@ -37,8 +37,8 @@
             this.lblCerra = new System.Windows.Forms.Label();
             this.pnlSide = new System.Windows.Forms.Panel();
             this.pnlSubMenu = new System.Windows.Forms.Panel();
-            this.btnEmpleado = new System.Windows.Forms.Button();
-            this.btnGerente = new System.Windows.Forms.Button();
+            this.btnTaquilla = new System.Windows.Forms.Button();
+            this.btnDulceria = new System.Windows.Forms.Button();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.pnlChildForms = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pcLogo)).BeginInit();
@@ -116,11 +116,11 @@
             // 
             this.lblMinimo.AutoSize = true;
             this.lblMinimo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblMinimo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimo.ForeColor = System.Drawing.Color.White;
             this.lblMinimo.Location = new System.Drawing.Point(755, 9);
             this.lblMinimo.Name = "lblMinimo";
-            this.lblMinimo.Size = new System.Drawing.Size(31, 30);
+            this.lblMinimo.Size = new System.Drawing.Size(24, 21);
             this.lblMinimo.TabIndex = 7;
             this.lblMinimo.Text = "__";
             this.lblMinimo.Click += new System.EventHandler(this.lblMinimo_Click);
@@ -129,11 +129,11 @@
             // 
             this.lblCerra.AutoSize = true;
             this.lblCerra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblCerra.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCerra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerra.ForeColor = System.Drawing.Color.White;
             this.lblCerra.Location = new System.Drawing.Point(820, 9);
             this.lblCerra.Name = "lblCerra";
-            this.lblCerra.Size = new System.Drawing.Size(25, 30);
+            this.lblCerra.Size = new System.Drawing.Size(19, 21);
             this.lblCerra.TabIndex = 8;
             this.lblCerra.Text = "X";
             this.lblCerra.Click += new System.EventHandler(this.lblCerra_Click);
@@ -152,43 +152,43 @@
             // pnlSubMenu
             // 
             this.pnlSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.pnlSubMenu.Controls.Add(this.btnEmpleado);
-            this.pnlSubMenu.Controls.Add(this.btnGerente);
+            this.pnlSubMenu.Controls.Add(this.btnTaquilla);
+            this.pnlSubMenu.Controls.Add(this.btnDulceria);
             this.pnlSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubMenu.Location = new System.Drawing.Point(0, 33);
             this.pnlSubMenu.Name = "pnlSubMenu";
             this.pnlSubMenu.Size = new System.Drawing.Size(198, 68);
             this.pnlSubMenu.TabIndex = 2;
             // 
-            // btnEmpleado
+            // btnTaquilla
             // 
-            this.btnEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpleado.ForeColor = System.Drawing.Color.White;
-            this.btnEmpleado.Location = new System.Drawing.Point(0, 32);
-            this.btnEmpleado.Name = "btnEmpleado";
-            this.btnEmpleado.Size = new System.Drawing.Size(198, 31);
-            this.btnEmpleado.TabIndex = 11;
-            this.btnEmpleado.Text = "Empleado";
-            this.btnEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleado.UseVisualStyleBackColor = true;
-            this.btnEmpleado.Click += new System.EventHandler(this.btnEmpleado_Click);
+            this.btnTaquilla.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTaquilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaquilla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaquilla.ForeColor = System.Drawing.Color.White;
+            this.btnTaquilla.Location = new System.Drawing.Point(0, 32);
+            this.btnTaquilla.Name = "btnTaquilla";
+            this.btnTaquilla.Size = new System.Drawing.Size(198, 31);
+            this.btnTaquilla.TabIndex = 11;
+            this.btnTaquilla.Text = "Taquilla";
+            this.btnTaquilla.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaquilla.UseVisualStyleBackColor = true;
+            this.btnTaquilla.Click += new System.EventHandler(this.btnEmpleado_Click);
             // 
-            // btnGerente
+            // btnDulceria
             // 
-            this.btnGerente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerente.ForeColor = System.Drawing.Color.White;
-            this.btnGerente.Location = new System.Drawing.Point(0, 0);
-            this.btnGerente.Name = "btnGerente";
-            this.btnGerente.Size = new System.Drawing.Size(198, 32);
-            this.btnGerente.TabIndex = 10;
-            this.btnGerente.Text = "Gerente";
-            this.btnGerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGerente.UseVisualStyleBackColor = true;
-            this.btnGerente.Click += new System.EventHandler(this.btnGerente_Click);
+            this.btnDulceria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDulceria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDulceria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDulceria.ForeColor = System.Drawing.Color.White;
+            this.btnDulceria.Location = new System.Drawing.Point(0, 0);
+            this.btnDulceria.Name = "btnDulceria";
+            this.btnDulceria.Size = new System.Drawing.Size(198, 32);
+            this.btnDulceria.TabIndex = 10;
+            this.btnDulceria.Text = "Dulceriaía";
+            this.btnDulceria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDulceria.UseVisualStyleBackColor = true;
+            this.btnDulceria.Click += new System.EventHandler(this.btnGerente_Click);
             // 
             // pnlBottom
             // 
@@ -249,8 +249,8 @@
         private System.Windows.Forms.Label lblCerra;
         private System.Windows.Forms.Panel pnlSide;
         private System.Windows.Forms.Panel pnlSubMenu;
-        private System.Windows.Forms.Button btnEmpleado;
-        private System.Windows.Forms.Button btnGerente;
+        private System.Windows.Forms.Button btnTaquilla;
+        private System.Windows.Forms.Button btnDulceria;
         private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Panel pnlChildForms;
     }

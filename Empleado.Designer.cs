@@ -84,7 +84,7 @@
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(158, 23);
             this.btnIngresar.TabIndex = 9;
-            this.btnIngresar.Text = "Ingresar empleado";
+            this.btnIngresar.Text = "Ingresar taquilla";
             this.btnIngresar.UseVisualStyleBackColor = true;
             // 
             // lblPassGerente

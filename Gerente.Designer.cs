@@ -68,7 +68,7 @@
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(158, 23);
             this.btnIngresar.TabIndex = 2;
-            this.btnIngresar.Text = "Ingresar gerente";
+            this.btnIngresar.Text = "Ingresar dulcería";
             this.btnIngresar.UseVisualStyleBackColor = true;
             // 
             // label1
