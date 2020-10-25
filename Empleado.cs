@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CinemexApp
 {
-    public partial class Form1 : Form
+    public partial class Empleado : Form
     {
-        public Form1()
+        public Empleado()
         {
             InitializeComponent();
         }

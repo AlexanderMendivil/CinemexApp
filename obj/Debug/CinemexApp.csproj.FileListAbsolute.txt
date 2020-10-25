@@ -1,0 +1,12 @@
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\bin\Debug\CinemexApp.exe.config
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\bin\Debug\CinemexApp.exe
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\bin\Debug\CinemexApp.pdb
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.csprojAssemblyReference.cache
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.Login.resources
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.MenuPrincipal.resources
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.Properties.Resources.resources
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.csproj.GenerateResource.cache
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.exe
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.pdb
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.Gerente.resources
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.Empleado.resources
