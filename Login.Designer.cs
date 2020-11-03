@@ -185,7 +185,7 @@
             this.btnDulceria.Name = "btnDulceria";
             this.btnDulceria.Size = new System.Drawing.Size(198, 32);
             this.btnDulceria.TabIndex = 10;
-            this.btnDulceria.Text = "Dulceriaía";
+            this.btnDulceria.Text = "Dulcería";
             this.btnDulceria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDulceria.UseVisualStyleBackColor = true;
             this.btnDulceria.Click += new System.EventHandler(this.btnGerente_Click);

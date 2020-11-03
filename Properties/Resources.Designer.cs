@@ -63,6 +63,16 @@ namespace CinemexApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5ef1c4e91cfbc200047e7430 {
+            get {
+                object obj = ResourceManager.GetObject("5ef1c4e91cfbc200047e7430", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoCine {
             get {
                 object obj = ResourceManager.GetObject("logoCine", resourceCulture);
