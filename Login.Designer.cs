@@ -36,15 +36,20 @@
             this.lblMinimo = new System.Windows.Forms.Label();
             this.lblCerra = new System.Windows.Forms.Label();
             this.pnlSide = new System.Windows.Forms.Panel();
-            this.pnlSubMenu = new System.Windows.Forms.Panel();
-            this.btnTaquilla = new System.Windows.Forms.Button();
-            this.btnDulceria = new System.Windows.Forms.Button();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.pnlChildForms = new System.Windows.Forms.Panel();
+            this.btnIngresarPlataforma = new System.Windows.Forms.Button();
+            this.pnl2 = new System.Windows.Forms.Panel();
+            this.pnl1 = new System.Windows.Forms.Panel();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.lblError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcLogo)).BeginInit();
             this.pnlSide.SuspendLayout();
-            this.pnlSubMenu.SuspendLayout();
             this.pnlBottom.SuspendLayout();
+            this.pnlChildForms.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnIngreso
@@ -141,54 +146,12 @@
             // pnlSide
             // 
             this.pnlSide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlSide.Controls.Add(this.pnlSubMenu);
             this.pnlSide.Controls.Add(this.BtnIngreso);
             this.pnlSide.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSide.Location = new System.Drawing.Point(0, 166);
             this.pnlSide.Name = "pnlSide";
             this.pnlSide.Size = new System.Drawing.Size(200, 321);
             this.pnlSide.TabIndex = 9;
-            // 
-            // pnlSubMenu
-            // 
-            this.pnlSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.pnlSubMenu.Controls.Add(this.btnTaquilla);
-            this.pnlSubMenu.Controls.Add(this.btnDulceria);
-            this.pnlSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenu.Location = new System.Drawing.Point(0, 33);
-            this.pnlSubMenu.Name = "pnlSubMenu";
-            this.pnlSubMenu.Size = new System.Drawing.Size(198, 68);
-            this.pnlSubMenu.TabIndex = 2;
-            // 
-            // btnTaquilla
-            // 
-            this.btnTaquilla.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTaquilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaquilla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaquilla.ForeColor = System.Drawing.Color.White;
-            this.btnTaquilla.Location = new System.Drawing.Point(0, 32);
-            this.btnTaquilla.Name = "btnTaquilla";
-            this.btnTaquilla.Size = new System.Drawing.Size(198, 31);
-            this.btnTaquilla.TabIndex = 11;
-            this.btnTaquilla.Text = "Taquilla";
-            this.btnTaquilla.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaquilla.UseVisualStyleBackColor = true;
-            this.btnTaquilla.Click += new System.EventHandler(this.btnEmpleado_Click);
-            // 
-            // btnDulceria
-            // 
-            this.btnDulceria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDulceria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDulceria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDulceria.ForeColor = System.Drawing.Color.White;
-            this.btnDulceria.Location = new System.Drawing.Point(0, 0);
-            this.btnDulceria.Name = "btnDulceria";
-            this.btnDulceria.Size = new System.Drawing.Size(198, 32);
-            this.btnDulceria.TabIndex = 10;
-            this.btnDulceria.Text = "Dulcería";
-            this.btnDulceria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDulceria.UseVisualStyleBackColor = true;
-            this.btnDulceria.Click += new System.EventHandler(this.btnGerente_Click);
             // 
             // pnlBottom
             // 
@@ -202,11 +165,108 @@
             // pnlChildForms
             // 
             this.pnlChildForms.BackColor = System.Drawing.Color.Transparent;
+            this.pnlChildForms.Controls.Add(this.lblError);
+            this.pnlChildForms.Controls.Add(this.btnIngresarPlataforma);
+            this.pnlChildForms.Controls.Add(this.pnl2);
+            this.pnlChildForms.Controls.Add(this.pnl1);
+            this.pnlChildForms.Controls.Add(this.lblPassword);
+            this.pnlChildForms.Controls.Add(this.lblUser);
+            this.pnlChildForms.Controls.Add(this.txtPassword);
+            this.pnlChildForms.Controls.Add(this.txtUser);
             this.pnlChildForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChildForms.Location = new System.Drawing.Point(200, 166);
             this.pnlChildForms.Name = "pnlChildForms";
             this.pnlChildForms.Size = new System.Drawing.Size(657, 275);
             this.pnlChildForms.TabIndex = 12;
+            // 
+            // btnIngresarPlataforma
+            // 
+            this.btnIngresarPlataforma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngresarPlataforma.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresarPlataforma.ForeColor = System.Drawing.Color.White;
+            this.btnIngresarPlataforma.Location = new System.Drawing.Point(230, 223);
+            this.btnIngresarPlataforma.Name = "btnIngresarPlataforma";
+            this.btnIngresarPlataforma.Size = new System.Drawing.Size(158, 23);
+            this.btnIngresarPlataforma.TabIndex = 21;
+            this.btnIngresarPlataforma.Text = "Ingresar Plataforma";
+            this.btnIngresarPlataforma.UseVisualStyleBackColor = true;
+            this.btnIngresarPlataforma.Visible = false;
+            this.btnIngresarPlataforma.Click += new System.EventHandler(this.btnIngresarPlataforma_Click);
+            // 
+            // pnl2
+            // 
+            this.pnl2.BackColor = System.Drawing.Color.Black;
+            this.pnl2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pnl2.Location = new System.Drawing.Point(164, 195);
+            this.pnl2.Name = "pnl2";
+            this.pnl2.Size = new System.Drawing.Size(300, 1);
+            this.pnl2.TabIndex = 20;
+            this.pnl2.Visible = false;
+            // 
+            // pnl1
+            // 
+            this.pnl1.BackColor = System.Drawing.Color.Black;
+            this.pnl1.Location = new System.Drawing.Point(164, 136);
+            this.pnl1.Name = "pnl1";
+            this.pnl1.Size = new System.Drawing.Size(300, 1);
+            this.pnl1.TabIndex = 19;
+            this.pnl1.Visible = false;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.ForeColor = System.Drawing.Color.Black;
+            this.lblPassword.Location = new System.Drawing.Point(161, 176);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(64, 13);
+            this.lblPassword.TabIndex = 18;
+            this.lblPassword.Text = "Contraseña:";
+            this.lblPassword.Visible = false;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.Black;
+            this.lblUser.Location = new System.Drawing.Point(166, 117);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(21, 15);
+            this.lblUser.TabIndex = 17;
+            this.lblUser.Text = "ID:";
+            this.lblUser.Visible = false;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.ForeColor = System.Drawing.Color.White;
+            this.txtPassword.Location = new System.Drawing.Point(226, 177);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(285, 13);
+            this.txtPassword.TabIndex = 15;
+            this.txtPassword.Text = "Prueba";
+            this.txtPassword.Visible = false;
+            // 
+            // txtUser
+            // 
+            this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
+            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUser.ForeColor = System.Drawing.Color.White;
+            this.txtUser.Location = new System.Drawing.Point(226, 119);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(285, 13);
+            this.txtUser.TabIndex = 14;
+            this.txtUser.Text = "Prueba";
+            this.txtUser.Visible = false;
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Location = new System.Drawing.Point(485, 239);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.TabIndex = 22;
             // 
             // Login
             // 
@@ -231,9 +291,10 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pcLogo)).EndInit();
             this.pnlSide.ResumeLayout(false);
-            this.pnlSubMenu.ResumeLayout(false);
             this.pnlBottom.ResumeLayout(false);
             this.pnlBottom.PerformLayout();
+            this.pnlChildForms.ResumeLayout(false);
+            this.pnlChildForms.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,10 +309,15 @@
         private System.Windows.Forms.Label lblMinimo;
         private System.Windows.Forms.Label lblCerra;
         private System.Windows.Forms.Panel pnlSide;
-        private System.Windows.Forms.Panel pnlSubMenu;
-        private System.Windows.Forms.Button btnTaquilla;
-        private System.Windows.Forms.Button btnDulceria;
         private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Panel pnlChildForms;
+        private System.Windows.Forms.Panel pnl2;
+        private System.Windows.Forms.Panel pnl1;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.Button btnIngresarPlataforma;
+        private System.Windows.Forms.Label lblError;
     }
 }

@@ -46,23 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Empleado.cs">
+    <Compile Include="frmDulceria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Empleado.Designer.cs">
-      <DependentUpon>Empleado.cs</DependentUpon>
+    <Compile Include="frmDulceria.Designer.cs">
+      <DependentUpon>frmDulceria.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTaquilla.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTaquilla.Designer.cs">
       <DependentUpon>frmTaquilla.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gerente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gerente.Designer.cs">
-      <DependentUpon>Gerente.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -78,14 +72,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Empleado.resx">
-      <DependentUpon>Empleado.cs</DependentUpon>
+    <EmbeddedResource Include="frmDulceria.resx">
+      <DependentUpon>frmDulceria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTaquilla.resx">
       <DependentUpon>frmTaquilla.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gerente.resx">
-      <DependentUpon>Gerente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -121,6 +112,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\logoCine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\imgTicket.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\imgDulceria.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\imgEntrada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\imgEnt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\entra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cartelera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\dulces.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

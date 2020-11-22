@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CinemexApp
 {
@@ -21,7 +22,8 @@ namespace CinemexApp
         private extern static void SendMessage(System.IntPtr hwnd, int wMsg, int wParam, int Lparam);
 
         const int GRIP_SIZE = 15;
-        public bool visible = false;
+
+        string cadenaConexion = "Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True";
 
         public Login()
         {
@@ -37,7 +39,6 @@ namespace CinemexApp
 
         private void Login_Load(object sender, EventArgs e)
         {
-            pnlSubMenu.Visible = false;
         }
 
         private void lblMinimo_Click(object sender, EventArgs e)
@@ -59,48 +60,48 @@ namespace CinemexApp
 
         private void BtnIngreso_Click(object sender, EventArgs e)
         {
-            pnlSubMenu.Visible = true;
-
-            if (visible == false)
-            {
-                visible = true;
-            }
-            else
-            {
-                pnlSubMenu.Visible = false;
-                visible = false;
-            }  
+            lblUser.Visible = true;
+            lblPassword.Visible = true;
+            pnl1.Visible = true;
+            pnl2.Visible = true;
+            txtUser.Visible = true;
+            txtPassword.Visible = true;
+            btnIngresarPlataforma.Visible = true;
+            pnlChildForms.BackColor = Color.FromArgb(220, 81, 81);
         }
 
-        private void btnEmpleado_Click(object sender, EventArgs e)
-        {
-            AbrirForm<Empleado>();
-        }
-        private void btnGerente_Click(object sender, EventArgs e)
-        {
-            AbrirForm<Gerente>();
-        }
+
         #endregion
 
-        private void AbrirForm<SubForm>() where SubForm: Form, new()
+        private void btnIngresarPlataforma_Click(object sender, EventArgs e)
         {
-            Form LoginEmpleado;
-            LoginEmpleado = pnlChildForms.Controls.OfType<SubForm>().FirstOrDefault();
 
-            if(LoginEmpleado == null){
-                LoginEmpleado = new SubForm();
-                LoginEmpleado.TopLevel = false;
-                LoginEmpleado.Dock = DockStyle.Fill;
-                pnlChildForms.Controls.Add(LoginEmpleado);
-                pnlChildForms.Tag = LoginEmpleado;
-                LoginEmpleado.Show();
-                LoginEmpleado.BringToFront();
+            try
+            {
+
+            SqlConnection conexion = new SqlConnection(cadenaConexion);
+
+            conexion.Open();
+            SqlCommand comando = new SqlCommand("select idEmpleado, contrasena from EMPLEADO where idEmpleado="+txtUser.Text+ "and contrasena='" +txtPassword.Text+"'", conexion);
+
+            SqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.Read())
+            {
+
+            this.Close();
+
             }
             else
             {
-                LoginEmpleado.BringToFront();
+                lblError.Text = "El usuario o contraseña son incorrectos";
+            }
+            }
+            catch (Exception)
+            {
+                lblError.Enabled = true;
+                lblError.Text = "Algun campo está vacio o es incorrecto";
             }
         }
-
     }
 }
