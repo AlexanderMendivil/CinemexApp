@@ -23,12 +23,16 @@ namespace CinemexApp
 
         const int GRIP_SIZE = 15;
 
-        string cadenaConexion = "Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True";
+        //string cadenaConexion = "Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True";
+        string cadenaConexion = "Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True";
 
         public Login()
         {
             InitializeComponent();
         }
+
+        frmDulceria dulces = new frmDulceria();
+        ConexionDulceria dulceria = new ConexionDulceria();
 
         #region Funcionalidad form
         private void Login_MouseDown(object sender, MouseEventArgs e)
@@ -75,10 +79,9 @@ namespace CinemexApp
 
         private void btnIngresarPlataforma_Click(object sender, EventArgs e)
         {
-
             try
             {
-
+            dulces.EmpleadoSeleccionado(txtUser.Text);
             SqlConnection conexion = new SqlConnection(cadenaConexion);
 
             conexion.Open();

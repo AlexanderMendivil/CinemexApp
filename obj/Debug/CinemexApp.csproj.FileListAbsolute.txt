@@ -14,8 +14,6 @@ C:\Git_Prueba\Bases_De_Datos\CinemexApp\bin\Debug\CinemexApp.exe.config
 C:\Git_Prueba\Bases_De_Datos\CinemexApp\bin\Debug\CinemexApp.exe
 C:\Git_Prueba\Bases_De_Datos\CinemexApp\bin\Debug\CinemexApp.pdb
 C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.csprojAssemblyReference.cache
-C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.Empleado.resources
-C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.Gerente.resources
 C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.Login.resources
 C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.MenuPrincipal.resources
 C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.Properties.Resources.resources
@@ -36,3 +34,4 @@ C:\Users\alexa\OneDrive\Escritorio\cine\CinemexApp\obj\Debug\CinemexApp.csproj.G
 C:\Users\alexa\OneDrive\Escritorio\cine\CinemexApp\obj\Debug\CinemexApp.exe
 C:\Users\alexa\OneDrive\Escritorio\cine\CinemexApp\obj\Debug\CinemexApp.pdb
 C:\Users\alexa\OneDrive\Escritorio\cine\CinemexApp\obj\Debug\CinemexApp.frmDulceria.resources
+C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.frmDulceria.resources

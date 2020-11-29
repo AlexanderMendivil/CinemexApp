@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConexionDulceria.cs" />
     <Compile Include="frmDulceria.cs">
       <SubType>Form</SubType>
     </Compile>
