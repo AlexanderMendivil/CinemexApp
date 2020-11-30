@@ -15,7 +15,6 @@ namespace CinemexApp
         SqlCommand cmd;
         SqlDataReader dr;
         string tipodeDulce;
-        string nombredeEmpleado;
 
         public ConexionDulceria()
         {
@@ -30,12 +29,12 @@ namespace CinemexApp
             }
         }
 
-        public void LlenarNombreEmpleado(Label lb)
+        public void LlenarNombreEmpleado(Label lb, string nombreEmpleado)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand("select nombreEmpleado from EMPLEADO where idEmpleado = '" +
-                    nombredeEmpleado + "'", conexion);
+                    nombreEmpleado + "'", conexion);
                 using (SqlDataReader dr = cmd.ExecuteReader())
                 {
                     if (dr.Read())
@@ -96,7 +95,7 @@ namespace CinemexApp
                 if (dr.Read())
                 {
                     int precioFinal = cant * Convert.ToInt32(dr["precio"].ToString());
-                    MessageBox.Show("Se compraron " + cant + " boletos por $" + precioFinal + " pesos");
+                    MessageBox.Show("Se compraron " + cant + " " + nombreDulce + " por $" + precioFinal + " pesos");
                 }
                 dr.Close();
             }
@@ -109,11 +108,6 @@ namespace CinemexApp
         public void TipodeDulceSeleccionado(string tipodulce)
         {
             tipodeDulce = tipodulce;
-        }
-
-        public void EmpleadoSeleccionado(string nombreEmpleado)
-        {
-            nombredeEmpleado = nombreEmpleado;
         }
     }
 }

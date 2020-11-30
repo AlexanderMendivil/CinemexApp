@@ -30,11 +30,13 @@ namespace CinemexApp
             InitializeComponent();
         }
 
+        public string idEmpleado;
+
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
             LoginCine.Enabled = true;
             LoginCine.ShowDialog();
-            
+            idEmpleado = LoginCine.RegresarIDEmpleado();
         }
 
         private void lblCerra_Click(object sender, EventArgs e)
@@ -72,7 +74,7 @@ namespace CinemexApp
             this.Enabled = false;
             this.Visible = false;
 
-            frmDulceria Dulceria = new frmDulceria();
+            frmDulceria Dulceria = new frmDulceria(idEmpleado);
             Dulceria.Enabled = true;
             Dulceria.Show();
             Dulceria.Owner = this;

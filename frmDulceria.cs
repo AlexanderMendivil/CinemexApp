@@ -13,14 +13,16 @@ namespace CinemexApp
 {
     public partial class frmDulceria : Form
     {
-        public frmDulceria()
+        string idEmpleados;
+
+        public frmDulceria(string idEmpleado)
         {
             InitializeComponent();
+            idEmpleados = idEmpleado;
         }
 
         SqlConnection conexion;
         ConexionDulceria dulceria = new ConexionDulceria();
-        string nombredeEmpleado;
 
         private void lblCerra_Click(object sender, EventArgs e)
         {
@@ -36,7 +38,7 @@ namespace CinemexApp
 
         private void frmDulceria_Load(object sender, EventArgs e)
         {
-            LlenarNombreEmpleado();
+            dulceria.LlenarNombreEmpleado(lblEmpleado, idEmpleados);
             dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
             cmbDulce.Enabled = false;
             txtCantidad.Enabled = false;
@@ -69,34 +71,6 @@ namespace CinemexApp
             txtCantidad.Enabled = true;
         }
 
-        public void LlenarNombreEmpleado()
-        {
-            try
-            {
-                conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
-                SqlCommand cmd = new SqlCommand("select nombreEmpleado from EMPLEADO where idEmpleado = '" + 
-                    Convert.ToInt32(nombredeEmpleado) + "'", conexion);
-                conexion.Open();
-                using (SqlDataReader dr = cmd.ExecuteReader())
-                {
-                    if (dr.Read())
-                    {
-                        lblEmpleado.Text = dr["nombreEmpleado"].ToString();
-                    }
-                }
-                conexion.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo asignar nombre al emplado " + ex.ToString());
-            }
-        }
-
-        public void EmpleadoSeleccionado(string nombreEmpleado)
-        {
-            nombredeEmpleado = nombreEmpleado;
-        }
-
         private void cmbTipoDeDulce_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -122,7 +96,7 @@ namespace CinemexApp
             }
             catch (Exception)
             {
-                MessageBox.Show("Indique la cantidad de boletos");
+                MessageBox.Show("Indique la cantidad de producto");
                 txtCantidad.Clear();
             }
         }

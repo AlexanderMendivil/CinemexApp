@@ -31,8 +31,7 @@ namespace CinemexApp
             InitializeComponent();
         }
 
-        frmDulceria dulces = new frmDulceria();
-        ConexionDulceria dulceria = new ConexionDulceria();
+        string idEmpleado;
 
         #region Funcionalidad form
         private void Login_MouseDown(object sender, MouseEventArgs e)
@@ -81,7 +80,6 @@ namespace CinemexApp
         {
             try
             {
-            dulces.EmpleadoSeleccionado(txtUser.Text);
             SqlConnection conexion = new SqlConnection(cadenaConexion);
 
             conexion.Open();
@@ -91,9 +89,8 @@ namespace CinemexApp
 
             if (reader.Read())
             {
-
+            idEmpleado = txtUser.Text;
             this.Close();
-
             }
             else
             {
@@ -105,6 +102,11 @@ namespace CinemexApp
                 lblError.Enabled = true;
                 lblError.Text = "Algun campo está vacio o es incorrecto";
             }
+        }
+
+        public string RegresarIDEmpleado()
+        {
+            return idEmpleado;
         }
     }
 }
