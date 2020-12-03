@@ -106,6 +106,7 @@
             // 
             // txtMarca
             // 
+            this.txtMarca.Enabled = false;
             this.txtMarca.Location = new System.Drawing.Point(110, 131);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.ReadOnly = true;
@@ -114,6 +115,7 @@
             // 
             // txtCantidad
             // 
+            this.txtCantidad.Enabled = false;
             this.txtCantidad.Location = new System.Drawing.Point(152, 185);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 23);
@@ -156,6 +158,7 @@
             // cmbDulce
             // 
             this.cmbDulce.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDulce.Enabled = false;
             this.cmbDulce.FormattingEnabled = true;
             this.cmbDulce.Location = new System.Drawing.Point(110, 88);
             this.cmbDulce.Name = "cmbDulce";

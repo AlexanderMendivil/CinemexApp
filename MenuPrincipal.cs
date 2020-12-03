@@ -62,7 +62,7 @@ namespace CinemexApp
             this.Enabled = false;
             this.Visible = false;
 
-         frmTaquilla Taquilla = new frmTaquilla();
+            frmTaquilla Taquilla = new frmTaquilla(idEmpleado);
             Taquilla.Enabled = true;
             Taquilla.Show();
             Taquilla.Owner = this;

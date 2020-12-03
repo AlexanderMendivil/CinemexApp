@@ -32,7 +32,7 @@
             this.pbxLogoCinemex = new System.Windows.Forms.PictureBox();
             this.lblEmpleado = new System.Windows.Forms.Label();
             this.gbxPrincipal = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblCantidadBoletos = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnComprar = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             // pbxLogoCinemex
             // 
             this.pbxLogoCinemex.Image = global::CinemexApp.Properties.Resources._5ef1c4e91cfbc200047e7430;
-            this.pbxLogoCinemex.Location = new System.Drawing.Point(369, 49);
+            this.pbxLogoCinemex.Location = new System.Drawing.Point(369, 72);
             this.pbxLogoCinemex.Name = "pbxLogoCinemex";
             this.pbxLogoCinemex.Size = new System.Drawing.Size(308, 204);
             this.pbxLogoCinemex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -62,7 +62,7 @@
             // 
             this.lblEmpleado.AutoSize = true;
             this.lblEmpleado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpleado.Location = new System.Drawing.Point(376, 12);
+            this.lblEmpleado.Location = new System.Drawing.Point(376, 35);
             this.lblEmpleado.Name = "lblEmpleado";
             this.lblEmpleado.Size = new System.Drawing.Size(84, 15);
             this.lblEmpleado.TabIndex = 2;
@@ -71,7 +71,7 @@
             // gbxPrincipal
             // 
             this.gbxPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
-            this.gbxPrincipal.Controls.Add(this.textBox1);
+            this.gbxPrincipal.Controls.Add(this.txtCantidad);
             this.gbxPrincipal.Controls.Add(this.lblCantidadBoletos);
             this.gbxPrincipal.Controls.Add(this.btnLimpiar);
             this.gbxPrincipal.Controls.Add(this.btnComprar);
@@ -82,19 +82,20 @@
             this.gbxPrincipal.Controls.Add(this.cmbPelícula);
             this.gbxPrincipal.Controls.Add(this.lblFuncion);
             this.gbxPrincipal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxPrincipal.Location = new System.Drawing.Point(12, 12);
+            this.gbxPrincipal.Location = new System.Drawing.Point(12, 35);
             this.gbxPrincipal.Name = "gbxPrincipal";
             this.gbxPrincipal.Size = new System.Drawing.Size(333, 284);
             this.gbxPrincipal.TabIndex = 1;
             this.gbxPrincipal.TabStop = false;
             this.gbxPrincipal.Text = "Venta de boletos";
             // 
-            // textBox1
+            // txtCantidad
             // 
-            this.textBox1.Location = new System.Drawing.Point(212, 185);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 14;
+            this.txtCantidad.Enabled = false;
+            this.txtCantidad.Location = new System.Drawing.Point(188, 185);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 23);
+            this.txtCantidad.TabIndex = 14;
             // 
             // lblCantidadBoletos
             // 
@@ -108,6 +109,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.btnLimpiar.Enabled = false;
             this.btnLimpiar.Location = new System.Drawing.Point(237, 240);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
@@ -118,6 +120,7 @@
             // btnComprar
             // 
             this.btnComprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.btnComprar.Enabled = false;
             this.btnComprar.Location = new System.Drawing.Point(152, 240);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(75, 23);
@@ -128,11 +131,13 @@
             // cmbIdioma
             // 
             this.cmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdioma.Enabled = false;
             this.cmbIdioma.FormattingEnabled = true;
             this.cmbIdioma.Location = new System.Drawing.Point(94, 85);
             this.cmbIdioma.Name = "cmbIdioma";
             this.cmbIdioma.Size = new System.Drawing.Size(218, 23);
             this.cmbIdioma.TabIndex = 10;
+            this.cmbIdioma.SelectedValueChanged += new System.EventHandler(this.cmbIdioma_SelectedValueChanged);
             // 
             // lblIdioma
             // 
@@ -146,11 +151,13 @@
             // cmbFuncion
             // 
             this.cmbFuncion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFuncion.Enabled = false;
             this.cmbFuncion.FormattingEnabled = true;
             this.cmbFuncion.Location = new System.Drawing.Point(94, 134);
             this.cmbFuncion.Name = "cmbFuncion";
             this.cmbFuncion.Size = new System.Drawing.Size(218, 23);
             this.cmbFuncion.TabIndex = 8;
+            this.cmbFuncion.SelectedValueChanged += new System.EventHandler(this.cmbFuncion_SelectedValueChanged);
             // 
             // lblPelicula
             // 
@@ -169,6 +176,7 @@
             this.cmbPelícula.Name = "cmbPelícula";
             this.cmbPelícula.Size = new System.Drawing.Size(218, 23);
             this.cmbPelícula.TabIndex = 6;
+            this.cmbPelícula.SelectedValueChanged += new System.EventHandler(this.cmbPelícula_SelectedValueChanged);
             // 
             // lblFuncion
             // 
@@ -210,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(738, 351);
+            this.ClientSize = new System.Drawing.Size(747, 353);
             this.Controls.Add(this.lblCerra);
             this.Controls.Add(this.lblMinimo);
             this.Controls.Add(this.lblEmpleado);
@@ -222,6 +230,7 @@
             this.Name = "frmTaquilla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TAQUILLA";
+            this.Load += new System.EventHandler(this.frmTaquilla_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmTaquilla_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogoCinemex)).EndInit();
             this.gbxPrincipal.ResumeLayout(false);
@@ -244,7 +253,7 @@
         private System.Windows.Forms.Label lblIdioma;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnComprar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblCantidadBoletos;
         private System.Windows.Forms.Label lblCerra;
         private System.Windows.Forms.Label lblMinimo;

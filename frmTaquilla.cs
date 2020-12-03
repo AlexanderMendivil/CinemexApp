@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CinemexApp
 {
@@ -19,13 +20,23 @@ namespace CinemexApp
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wMsg, int wParam, int Lparam);
 
-
         const int GRIP_SIZE = 15;
         public bool visible = false;
+        string idEmpleados;
 
-        public frmTaquilla()
+        public frmTaquilla(string idEmpleado)
         {
             InitializeComponent();
+            idEmpleados = idEmpleado;
+        }
+
+        SqlConnection conexion;
+        ConexionTaquilla taquilla = new ConexionTaquilla();
+
+        private void frmTaquilla_Load(object sender, EventArgs e)
+        {
+            taquilla.LlenarNombreEmpleado(lblEmpleado, idEmpleados);
+            taquilla.LlenarItemsPelicula(cmbPelícula);
         }
 
         private void frmTaquilla_MouseDown(object sender, MouseEventArgs e)
@@ -44,6 +55,35 @@ namespace CinemexApp
         private void lblMinimo_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void cmbPelícula_SelectedValueChanged(object sender, EventArgs e)
+        {
+            cmbIdioma.Items.Clear();
+            cmbFuncion.Items.Clear();
+            txtCantidad.Clear();
+            cmbFuncion.Enabled = false;
+            txtCantidad.Enabled = false;
+            btnComprar.Enabled = false;
+            taquilla.PeliculaSeleccionada(cmbPelícula.SelectedItem.ToString());
+            taquilla.LlenarItemsIdioma(cmbIdioma);
+            cmbIdioma.Enabled = true;
+            btnLimpiar.Enabled = true;
+        }
+
+        private void cmbIdioma_SelectedValueChanged(object sender, EventArgs e)
+        {
+            cmbFuncion.Items.Clear();
+            txtCantidad.Clear();
+            txtCantidad.Enabled = false;
+            taquilla.IdiomaSeleccionado(cmbIdioma.SelectedItem.ToString());
+            taquilla.LlenarItemsFuncion(cmbFuncion);
+            cmbFuncion.Enabled = true;
+        }
+
+        private void cmbFuncion_SelectedValueChanged(object sender, EventArgs e)
+        {
+            btnComprar.Enabled = true;
         }
     }
 }

@@ -24,6 +24,12 @@ namespace CinemexApp
         SqlConnection conexion;
         ConexionDulceria dulceria = new ConexionDulceria();
 
+        private void frmDulceria_Load(object sender, EventArgs e)
+        {
+            dulceria.LlenarNombreEmpleado(lblEmpleado, idEmpleados);
+            dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
+        }
+
         private void lblCerra_Click(object sender, EventArgs e)
         {
             Owner.Enabled = true;
@@ -36,18 +42,13 @@ namespace CinemexApp
             WindowState = FormWindowState.Minimized;
         }
 
-        private void frmDulceria_Load(object sender, EventArgs e)
-        {
-            dulceria.LlenarNombreEmpleado(lblEmpleado, idEmpleados);
-            dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
-            cmbDulce.Enabled = false;
-            txtCantidad.Enabled = false;
-        }
-
         private void cmbTipoDeDulce_SelectedValueChanged(object sender, EventArgs e)
         {
             cmbDulce.Items.Clear();
             txtMarca.Clear();
+            txtCantidad.Clear();
+            txtCantidad.Enabled = false;
+            btnComprar.Enabled = false;
             dulceria.TipodeDulceSeleccionado(cmbTipoDeDulce.SelectedItem.ToString());
             dulceria.LlenarItemsDulce(cmbDulce);
             cmbDulce.Enabled = true;
@@ -69,6 +70,7 @@ namespace CinemexApp
             }
             conexion.Close();
             txtCantidad.Enabled = true;
+            btnComprar.Enabled = false;
         }
 
         private void cmbTipoDeDulce_SelectedIndexChanged(object sender, EventArgs e)
@@ -88,11 +90,14 @@ namespace CinemexApp
                 dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text));
                 cmbTipoDeDulce.Items.Clear();
                 dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
-                cmbDulce.Enabled = false;
-                txtCantidad.Enabled = false;
                 cmbDulce.Items.Clear();
                 txtMarca.Clear();
                 txtCantidad.Clear();
+                cmbDulce.Enabled = false;
+                txtCantidad.Enabled = false;
+                txtMarca.Enabled = false;
+                btnComprar.Enabled = false;
+                btnLimpiar.Enabled = false;
             }
             catch (Exception)
             {
@@ -105,11 +110,14 @@ namespace CinemexApp
         {
             cmbTipoDeDulce.Items.Clear();
             dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
-            cmbDulce.Enabled = false;
-            txtCantidad.Enabled = false;
             cmbDulce.Items.Clear();
             txtMarca.Clear();
             txtCantidad.Clear();
+            cmbDulce.Enabled = false;
+            txtCantidad.Enabled = false;
+            txtMarca.Enabled = false;
+            btnComprar.Enabled = false;
+            btnLimpiar.Enabled = false;
         }
     }
 }

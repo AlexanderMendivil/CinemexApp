@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,14 +8,15 @@ using System.Windows.Forms;
 
 namespace CinemexApp
 {
-    class ConexionDulceria
+    class ConexionTaquilla
     {
         SqlConnection conexion;
         SqlCommand cmd;
         SqlDataReader dr;
-        string tipodeDulce;
+        string nombrePeliculas;
+        string idiomaElegido;
 
-        public ConexionDulceria()
+        public ConexionTaquilla()
         {
             try
             {
@@ -49,44 +49,61 @@ namespace CinemexApp
             }
         }
 
-        public void LlenarItemsTipoDulce(ComboBox cb)
+        public void LlenarItemsPelicula(ComboBox cb)
         {
             try
             {
-                cmd = new SqlCommand("select tipo from DULCE", conexion);
+                cmd = new SqlCommand("select nombrePelicula from PELICULA group by nombrePelicula", conexion);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    cb.Items.Add(dr["tipo"].ToString());
+                    cb.Items.Add(dr["nombrePelicula"].ToString());
                 }
                 dr.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo llenar el ComboBox Tipo de Dulce " + ex.ToString());
+                MessageBox.Show("No se pudo llenar el ComboBox Pelicula " + ex.ToString());
             }
         }
 
-        public void LlenarItemsDulce(ComboBox cb)
+        public void LlenarItemsIdioma(ComboBox cb)
         {
             try
             {
-                cmd = new SqlCommand("select nombreDulce from DULCE where tipo = @tipodeDulce", conexion);
-                cmd.Parameters.AddWithValue("tipodeDulce", tipodeDulce);
+                cmd = new SqlCommand("select idioma from FUNCION, PELICULA where FUNCION.idPelicula = PELICULA.idPelicula and nombrePelicula = '" + nombrePeliculas + "'", conexion);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    cb.Items.Add(dr["nombreDulce"].ToString());
+                    cb.Items.Add(dr["idioma"].ToString());
                 }
                 dr.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo llenar el ComboBox Dulce " + ex.ToString());
+                MessageBox.Show("No se pudo llenar el ComboBox Idioma " + ex.ToString());
             }
         }
 
-        public void Comprar(string nombreDulce , int cant)
+        public void LlenarItemsFuncion(ComboBox cb)
+        {
+            try
+            {
+                cmd = new SqlCommand("select hora from FUNCION, PELICULA where FUNCION.idPelicula = PELICULA.idPelicula and nombrePelicula = '" + nombrePeliculas + "' and idioma = '" + idiomaElegido + "'", conexion);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    cb.Items.Add(dr["hora"].ToString());
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo llenar el ComboBox Idioma " + ex.ToString());
+            }
+        }
+
+        public void Comprar(string nombreDulce, int cant)
         {
             try
             {
@@ -105,9 +122,14 @@ namespace CinemexApp
             }
         }
 
-        public void TipodeDulceSeleccionado(string tipodulce)
+        public void PeliculaSeleccionada(string nombrePelicula)
         {
-            tipodeDulce = tipodulce;
+            nombrePeliculas = nombrePelicula;
+        }
+
+        public void IdiomaSeleccionado(string idiomaselect)
+        {
+            idiomaElegido = idiomaselect;
         }
     }
 }

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionDulceria.cs" />
+    <Compile Include="ConexionTaquilla.cs" />
     <Compile Include="frmDulceria.cs">
       <SubType>Form</SubType>
     </Compile>
