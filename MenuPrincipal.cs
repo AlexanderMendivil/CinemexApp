@@ -30,13 +30,10 @@ namespace CinemexApp
             InitializeComponent();
         }
 
-        public string idEmpleado;
-
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
             LoginCine.Enabled = true;
             LoginCine.ShowDialog();
-            idEmpleado = LoginCine.RegresarIDEmpleado();
         }
 
         private void lblCerra_Click(object sender, EventArgs e)
@@ -59,25 +56,78 @@ namespace CinemexApp
         private void pbTaquilla_Click(object sender, EventArgs e)
         {
 
-            this.Enabled = false;
-            this.Visible = false;
+            pnlContainerTaquilla.Visible = true;
 
-            frmTaquilla Taquilla = new frmTaquilla(idEmpleado);
-            Taquilla.Enabled = true;
-            Taquilla.Show();
-            Taquilla.Owner = this;
+            if (visible == false)
+            {
+                visible = true;
+            }
+            else
+            {
+                pnlContainerTaquilla.Visible = false;
+                visible = false;
+            }
         }
 
         private void pbDulceria_Click(object sender, EventArgs e)
         {
 
-            this.Enabled = false;
-            this.Visible = false;
+            pnlContainerDulceria.Visible = true;
 
-            frmDulceria Dulceria = new frmDulceria(idEmpleado);
-            Dulceria.Enabled = true;
-            Dulceria.Show();
-            Dulceria.Owner = this;
+            if (visible == false)
+            {
+                visible = true;
+            }
+            else
+            {
+                pnlContainerDulceria.Visible = false;
+                visible = false;
+            }
+        }
+        private void AbrirForm<SubForm>() where SubForm : Form, new()
+        {
+            Form frmChild;
+            frmChild = pnlChildForms.Controls.OfType<SubForm>().FirstOrDefault();
+
+            if (frmChild == null)
+            {
+                frmChild = new SubForm();
+                frmChild.TopLevel = false;
+                frmChild.Dock = DockStyle.Fill;
+                pnlChildForms.Controls.Add(frmChild);
+                pnlChildForms.Tag = frmChild;
+                frmChild.Show();
+                frmChild.BringToFront();
+            }
+            else
+            {
+                frmChild.BringToFront();
+            }
+        }
+
+        public void btnConsultarDulceria_Click(object sender, EventArgs e)
+        {
+            AbrirForm<frmDulceria>();
+        }
+
+        private void btnConsultarTaquilla_Click(object sender, EventArgs e)
+        {
+            AbrirForm<frmTaquilla>();
+        }
+
+        private void btnAgregarDulceria_Click(object sender, EventArgs e)
+        {
+            AbrirForm<frmAgregarDulceria>();
+        }
+
+        private void btnEliminarDulceria_Click(object sender, EventArgs e)
+        {
+            AbrirForm<frmEliminarDulceria>();
+        }
+
+        private void btnModificarDulceria_Click(object sender, EventArgs e)
+        {
+            AbrirForm<frmModificarDulce>();
         }
     }
 }

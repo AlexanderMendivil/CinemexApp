@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace CinemexApp
 {
-    class ConexionDulceria
+      public class ConexionDulceria
     {
         SqlConnection conexion;
         SqlCommand cmd;
@@ -20,7 +20,7 @@ namespace CinemexApp
         {
             try
             {
-                conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
                 conexion.Open();
             }
             catch (Exception ex)

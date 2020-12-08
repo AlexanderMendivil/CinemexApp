@@ -13,12 +13,10 @@ namespace CinemexApp
 {
     public partial class frmDulceria : Form
     {
-        string idEmpleados;
 
-        public frmDulceria(string idEmpleado)
+        public frmDulceria()
         {
             InitializeComponent();
-            idEmpleados = idEmpleado;
         }
 
         SqlConnection conexion;
@@ -26,20 +24,8 @@ namespace CinemexApp
 
         private void frmDulceria_Load(object sender, EventArgs e)
         {
-            dulceria.LlenarNombreEmpleado(lblEmpleado, idEmpleados);
+            dulceria.LlenarNombreEmpleado(lblEmpleado, DatosEmpleado.idEmpleado);
             dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
-        }
-
-        private void lblCerra_Click(object sender, EventArgs e)
-        {
-            Owner.Enabled = true;
-            Owner.Visible = true;
-            this.Close();
-        }
-
-        private void lblMinimo_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
         }
 
         private void cmbTipoDeDulce_SelectedValueChanged(object sender, EventArgs e)
@@ -57,7 +43,7 @@ namespace CinemexApp
 
         private void cmbDulce_SelectedValueChanged(object sender, EventArgs e)
         {
-            conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
+            conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
             SqlCommand cmd = new SqlCommand("select marca from DULCE where nombreDulce = '" + 
                 cmbDulce.SelectedItem.ToString() + "'", conexion);
             conexion.Open();

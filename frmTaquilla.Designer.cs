@@ -42,8 +42,6 @@
             this.lblPelicula = new System.Windows.Forms.Label();
             this.cmbPelícula = new System.Windows.Forms.ComboBox();
             this.lblFuncion = new System.Windows.Forms.Label();
-            this.lblCerra = new System.Windows.Forms.Label();
-            this.lblMinimo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogoCinemex)).BeginInit();
             this.gbxPrincipal.SuspendLayout();
             this.SuspendLayout();
@@ -187,40 +185,12 @@
             this.lblFuncion.TabIndex = 7;
             this.lblFuncion.Text = "Función";
             // 
-            // lblCerra
-            // 
-            this.lblCerra.AutoSize = true;
-            this.lblCerra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblCerra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCerra.ForeColor = System.Drawing.Color.White;
-            this.lblCerra.Location = new System.Drawing.Point(708, 9);
-            this.lblCerra.Name = "lblCerra";
-            this.lblCerra.Size = new System.Drawing.Size(19, 21);
-            this.lblCerra.TabIndex = 10;
-            this.lblCerra.Text = "X";
-            this.lblCerra.Click += new System.EventHandler(this.lblCerra_Click);
-            // 
-            // lblMinimo
-            // 
-            this.lblMinimo.AutoSize = true;
-            this.lblMinimo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblMinimo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinimo.ForeColor = System.Drawing.Color.White;
-            this.lblMinimo.Location = new System.Drawing.Point(643, 9);
-            this.lblMinimo.Name = "lblMinimo";
-            this.lblMinimo.Size = new System.Drawing.Size(24, 21);
-            this.lblMinimo.TabIndex = 9;
-            this.lblMinimo.Text = "__";
-            this.lblMinimo.Click += new System.EventHandler(this.lblMinimo_Click);
-            // 
             // frmTaquilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(747, 353);
-            this.Controls.Add(this.lblCerra);
-            this.Controls.Add(this.lblMinimo);
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.gbxPrincipal);
             this.Controls.Add(this.pbxLogoCinemex);
@@ -255,7 +225,5 @@
         private System.Windows.Forms.Button btnComprar;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblCantidadBoletos;
-        private System.Windows.Forms.Label lblCerra;
-        private System.Windows.Forms.Label lblMinimo;
     }
 }

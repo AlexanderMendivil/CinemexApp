@@ -22,12 +22,10 @@ namespace CinemexApp
 
         const int GRIP_SIZE = 15;
         public bool visible = false;
-        string idEmpleados;
 
-        public frmTaquilla(string idEmpleado)
+        public frmTaquilla()
         {
             InitializeComponent();
-            idEmpleados = idEmpleado;
         }
 
         SqlConnection conexion;
@@ -35,7 +33,7 @@ namespace CinemexApp
 
         private void frmTaquilla_Load(object sender, EventArgs e)
         {
-            taquilla.LlenarNombreEmpleado(lblEmpleado, idEmpleados);
+            taquilla.LlenarNombreEmpleado(lblEmpleado, DatosEmpleado.idEmpleado);
             taquilla.LlenarItemsPelicula(cmbPelícula);
         }
 
@@ -45,17 +43,6 @@ namespace CinemexApp
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void lblCerra_Click(object sender, EventArgs e)
-        {
-            Owner.Enabled = true;
-            Owner.Visible = true;
-            this.Close();
-        }
-
-        private void lblMinimo_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
 
         private void cmbPelícula_SelectedValueChanged(object sender, EventArgs e)
         {

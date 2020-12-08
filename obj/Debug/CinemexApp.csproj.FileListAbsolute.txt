@@ -8,8 +8,6 @@ C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.Properties.Re
 C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.csproj.GenerateResource.cache
 C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.exe
 C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.pdb
-C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.Gerente.resources
-C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.Empleado.resources
 C:\Git_Prueba\Bases_De_Datos\CinemexApp\bin\Debug\CinemexApp.exe.config
 C:\Git_Prueba\Bases_De_Datos\CinemexApp\bin\Debug\CinemexApp.exe
 C:\Git_Prueba\Bases_De_Datos\CinemexApp\bin\Debug\CinemexApp.pdb
@@ -35,3 +33,8 @@ C:\Users\alexa\OneDrive\Escritorio\cine\CinemexApp\obj\Debug\CinemexApp.exe
 C:\Users\alexa\OneDrive\Escritorio\cine\CinemexApp\obj\Debug\CinemexApp.pdb
 C:\Users\alexa\OneDrive\Escritorio\cine\CinemexApp\obj\Debug\CinemexApp.frmDulceria.resources
 C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.frmDulceria.resources
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmDulceria.resources
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmTaquilla.resources
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmAgregarDulceria.resources
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmEliminarDulceria.resources
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmModificarDulce.resources

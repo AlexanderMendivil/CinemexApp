@@ -48,11 +48,30 @@
   <ItemGroup>
     <Compile Include="ConexionDulceria.cs" />
     <Compile Include="ConexionTaquilla.cs" />
+    <Compile Include="DatosEmpleado.cs" />
+    <Compile Include="frmAgregarDulceria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarDulceria.Designer.cs">
+      <DependentUpon>frmAgregarDulceria.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDulceria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDulceria.Designer.cs">
       <DependentUpon>frmDulceria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarDulceria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarDulceria.Designer.cs">
+      <DependentUpon>frmEliminarDulceria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarDulce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarDulce.Designer.cs">
+      <DependentUpon>frmModificarDulce.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTaquilla.cs">
       <SubType>Form</SubType>
@@ -74,8 +93,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgregarDulceria.resx">
+      <DependentUpon>frmAgregarDulceria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDulceria.resx">
       <DependentUpon>frmDulceria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarDulceria.resx">
+      <DependentUpon>frmEliminarDulceria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarDulce.resx">
+      <DependentUpon>frmModificarDulce.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTaquilla.resx">
       <DependentUpon>frmTaquilla.cs</DependentUpon>

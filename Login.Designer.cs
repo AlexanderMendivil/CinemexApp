@@ -38,6 +38,7 @@
             this.pnlSide = new System.Windows.Forms.Panel();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.pnlChildForms = new System.Windows.Forms.Panel();
+            this.lblError = new System.Windows.Forms.Label();
             this.btnIngresarPlataforma = new System.Windows.Forms.Button();
             this.pnl2 = new System.Windows.Forms.Panel();
             this.pnl1 = new System.Windows.Forms.Panel();
@@ -45,7 +46,6 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
-            this.lblError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcLogo)).BeginInit();
             this.pnlSide.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -179,6 +179,14 @@
             this.pnlChildForms.Size = new System.Drawing.Size(657, 275);
             this.pnlChildForms.TabIndex = 12;
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Location = new System.Drawing.Point(485, 239);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.TabIndex = 22;
+            // 
             // btnIngresarPlataforma
             // 
             this.btnIngresarPlataforma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -257,16 +265,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(285, 13);
             this.txtUser.TabIndex = 14;
-            this.txtUser.Text = "Prueba";
             this.txtUser.Visible = false;
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(485, 239);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 13);
-            this.lblError.TabIndex = 22;
             // 
             // Login
             // 
@@ -316,8 +315,8 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Button btnIngresarPlataforma;
         private System.Windows.Forms.Label lblError;
+        public System.Windows.Forms.TextBox txtUser;
     }
 }
