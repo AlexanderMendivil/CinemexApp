@@ -55,6 +55,12 @@
     <Compile Include="frmAgregarDulceria.Designer.cs">
       <DependentUpon>frmAgregarDulceria.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgregarTaquilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarTaquilla.Designer.cs">
+      <DependentUpon>frmAgregarTaquilla.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDulceria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,11 +73,23 @@
     <Compile Include="frmEliminarDulceria.Designer.cs">
       <DependentUpon>frmEliminarDulceria.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEliminarTaquilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarTaquilla.Designer.cs">
+      <DependentUpon>frmEliminarTaquilla.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmModificarDulce.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmModificarDulce.Designer.cs">
       <DependentUpon>frmModificarDulce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarTaquilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarTaquilla.Designer.cs">
+      <DependentUpon>frmModificarTaquilla.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTaquilla.cs">
       <SubType>Form</SubType>
@@ -96,14 +114,23 @@
     <EmbeddedResource Include="frmAgregarDulceria.resx">
       <DependentUpon>frmAgregarDulceria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarTaquilla.resx">
+      <DependentUpon>frmAgregarTaquilla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDulceria.resx">
       <DependentUpon>frmDulceria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEliminarDulceria.resx">
       <DependentUpon>frmEliminarDulceria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarTaquilla.resx">
+      <DependentUpon>frmEliminarTaquilla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmModificarDulce.resx">
       <DependentUpon>frmModificarDulce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarTaquilla.resx">
+      <DependentUpon>frmModificarTaquilla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTaquilla.resx">
       <DependentUpon>frmTaquilla.cs</DependentUpon>

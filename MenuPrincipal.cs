@@ -129,5 +129,20 @@ namespace CinemexApp
         {
             AbrirForm<frmModificarDulce>();
         }
+
+        private void btnModificarTaquilla_Click(object sender, EventArgs e)
+        {
+            AbrirForm<frmModificarTaquilla>();
+        }
+
+        private void btnElimarTaquilla_Click(object sender, EventArgs e)
+        {
+            AbrirForm<frmEliminarTaquilla>();
+        }
+
+        private void btnAgregarTaquilla_Click(object sender, EventArgs e)
+        {
+            AbrirForm<frmAgregarTaquilla>();
+        }
     }
 }

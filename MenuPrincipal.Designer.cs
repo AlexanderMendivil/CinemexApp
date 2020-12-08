@@ -43,9 +43,9 @@
             this.btnConsultarDulceria = new System.Windows.Forms.Button();
             this.btnAgregarDulceria = new System.Windows.Forms.Button();
             this.btnModificarDulceria = new System.Windows.Forms.Button();
+            this.pnlChildForms = new System.Windows.Forms.Panel();
             this.pbDulceria = new System.Windows.Forms.PictureBox();
             this.pbTaquilla = new System.Windows.Forms.PictureBox();
-            this.pnlChildForms = new System.Windows.Forms.Panel();
             this.pcLogo = new System.Windows.Forms.PictureBox();
             this.pnlBot.SuspendLayout();
             this.pnlContainer.SuspendLayout();
@@ -70,7 +70,7 @@
             this.lblSloganCinemex.AutoSize = true;
             this.lblSloganCinemex.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSloganCinemex.ForeColor = System.Drawing.Color.White;
-            this.lblSloganCinemex.Location = new System.Drawing.Point(288, 18);
+            this.lblSloganCinemex.Location = new System.Drawing.Point(572, 16);
             this.lblSloganCinemex.Name = "lblSloganCinemex";
             this.lblSloganCinemex.Size = new System.Drawing.Size(247, 30);
             this.lblSloganCinemex.TabIndex = 4;
@@ -141,6 +141,7 @@
             this.btnModificarTaquilla.TabIndex = 29;
             this.btnModificarTaquilla.Text = "MODIFICAR";
             this.btnModificarTaquilla.UseVisualStyleBackColor = true;
+            this.btnModificarTaquilla.Click += new System.EventHandler(this.btnModificarTaquilla_Click);
             // 
             // btnAgregarTaquilla
             // 
@@ -153,6 +154,7 @@
             this.btnAgregarTaquilla.TabIndex = 30;
             this.btnAgregarTaquilla.Text = "AGREGAR";
             this.btnAgregarTaquilla.UseVisualStyleBackColor = true;
+            this.btnAgregarTaquilla.Click += new System.EventHandler(this.btnAgregarTaquilla_Click);
             // 
             // btnConsultarTaquilla
             // 
@@ -178,6 +180,7 @@
             this.btnElimarTaquilla.TabIndex = 28;
             this.btnElimarTaquilla.Text = "ELIMINAR";
             this.btnElimarTaquilla.UseVisualStyleBackColor = true;
+            this.btnElimarTaquilla.Click += new System.EventHandler(this.btnElimarTaquilla_Click);
             // 
             // pnlContainerDulceria
             // 
@@ -245,6 +248,14 @@
             this.btnModificarDulceria.UseVisualStyleBackColor = true;
             this.btnModificarDulceria.Click += new System.EventHandler(this.btnModificarDulceria_Click);
             // 
+            // pnlChildForms
+            // 
+            this.pnlChildForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlChildForms.Location = new System.Drawing.Point(200, 112);
+            this.pnlChildForms.Name = "pnlChildForms";
+            this.pnlChildForms.Size = new System.Drawing.Size(817, 452);
+            this.pnlChildForms.TabIndex = 20;
+            // 
             // pbDulceria
             // 
             this.pbDulceria.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -270,14 +281,6 @@
             this.pbTaquilla.TabIndex = 14;
             this.pbTaquilla.TabStop = false;
             this.pbTaquilla.Click += new System.EventHandler(this.pbTaquilla_Click);
-            // 
-            // pnlChildForms
-            // 
-            this.pnlChildForms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlChildForms.Location = new System.Drawing.Point(200, 112);
-            this.pnlChildForms.Name = "pnlChildForms";
-            this.pnlChildForms.Size = new System.Drawing.Size(817, 452);
-            this.pnlChildForms.TabIndex = 20;
             // 
             // pcLogo
             // 

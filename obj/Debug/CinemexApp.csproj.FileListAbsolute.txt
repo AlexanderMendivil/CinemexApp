@@ -38,3 +38,6 @@ C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmTaquilla.r
 C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmAgregarDulceria.resources
 C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmEliminarDulceria.resources
 C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmModificarDulce.resources
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmAgregarTaquilla.resources
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmEliminarTaquilla.resources
+C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmModificarTaquilla.resources
