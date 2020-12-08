@@ -41,3 +41,9 @@ C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmModificarD
 C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmAgregarTaquilla.resources
 C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmEliminarTaquilla.resources
 C:\Users\alexa\OneDrive\Escritorio\CinemexApp\obj\Debug\CinemexApp.frmModificarTaquilla.resources
+C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.frmAgregarDulceria.resources
+C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.frmAgregarTaquilla.resources
+C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.frmEliminarDulceria.resources
+C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.frmEliminarTaquilla.resources
+C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.frmModificarDulce.resources
+C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.frmModificarTaquilla.resources

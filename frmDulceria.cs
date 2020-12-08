@@ -18,8 +18,6 @@ namespace CinemexApp
         {
             InitializeComponent();
         }
-
-        SqlConnection conexion;
         ConexionDulceria dulceria = new ConexionDulceria();
 
         private void frmDulceria_Load(object sender, EventArgs e)
@@ -43,19 +41,10 @@ namespace CinemexApp
 
         private void cmbDulce_SelectedValueChanged(object sender, EventArgs e)
         {
-            conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand("select marca from DULCE where nombreDulce = '" + 
-                cmbDulce.SelectedItem.ToString() + "'", conexion);
-            conexion.Open();
-            using (SqlDataReader dr = cmd.ExecuteReader())
-            {
-                if (dr.Read())
-                {
-                    txtMarca.Text = dr["marca"].ToString();
-                }
-            }
-            conexion.Close();
+            dulceria.DulceSeleccionado(cmbDulce.SelectedItem.ToString());
+            dulceria.LlenarTxtMarca(txtMarca);
             txtCantidad.Enabled = true;
+            txtCantidad.Clear();
             btnComprar.Enabled = false;
         }
 
