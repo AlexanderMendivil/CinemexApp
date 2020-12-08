@@ -174,6 +174,21 @@ namespace CinemexApp
             }
         }
 
+        public void Agregar(int idDulce, string tipoDulce, string nombreDulce, string marca, int precio)
+        {
+            try
+            {
+                cmd = new SqlCommand("insert into DULCE values('" + idDulce + "', '" + nombreDulce + "', '" + marca + "', '" + tipoDulce + "', '" + precio + "')", conexion);
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                MessageBox.Show("El producto " + nombreDulce + " se añadió correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo añadir el producto " + nombreDulce + ex.ToString());
+            }
+        }
+
         public void TipodeDulceSeleccionado(string tipodulce)
         {
             tipodeDulce = tipodulce;

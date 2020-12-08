@@ -30,6 +30,10 @@
         {
             this.lblEmpleado = new System.Windows.Forms.Label();
             this.gbxPrincipal = new System.Windows.Forms.GroupBox();
+            this.txtPrecioDulce = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTipoDulce = new System.Windows.Forms.TextBox();
+            this.txtIdDulce = new System.Windows.Forms.TextBox();
             this.txtNombreDulce = new System.Windows.Forms.TextBox();
             this.txtMarcaDulce = new System.Windows.Forms.TextBox();
             this.lblTipoDulce = new System.Windows.Forms.Label();
@@ -37,11 +41,8 @@
             this.lblNombreDulce = new System.Windows.Forms.Label();
             this.lblIdDulce = new System.Windows.Forms.Label();
             this.lblMarcaDulce = new System.Windows.Forms.Label();
-            this.txtIdDulce = new System.Windows.Forms.TextBox();
-            this.txtTipoDulce = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPrecioDulce = new System.Windows.Forms.TextBox();
             this.pbxLogoCinemex = new System.Windows.Forms.PictureBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.gbxPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogoCinemex)).BeginInit();
             this.SuspendLayout();
@@ -59,13 +60,14 @@
             // gbxPrincipal
             // 
             this.gbxPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.gbxPrincipal.Controls.Add(this.btnLimpiar);
             this.gbxPrincipal.Controls.Add(this.txtPrecioDulce);
             this.gbxPrincipal.Controls.Add(this.label1);
             this.gbxPrincipal.Controls.Add(this.txtTipoDulce);
             this.gbxPrincipal.Controls.Add(this.txtIdDulce);
             this.gbxPrincipal.Controls.Add(this.txtNombreDulce);
-            this.gbxPrincipal.Controls.Add(this.txtMarcaDulce);
             this.gbxPrincipal.Controls.Add(this.lblTipoDulce);
+            this.gbxPrincipal.Controls.Add(this.txtMarcaDulce);
             this.gbxPrincipal.Controls.Add(this.btnAgregarDulce);
             this.gbxPrincipal.Controls.Add(this.lblNombreDulce);
             this.gbxPrincipal.Controls.Add(this.lblIdDulce);
@@ -78,27 +80,63 @@
             this.gbxPrincipal.TabStop = false;
             this.gbxPrincipal.Text = "Agregar dulces";
             // 
+            // txtPrecioDulce
+            // 
+            this.txtPrecioDulce.Enabled = false;
+            this.txtPrecioDulce.Location = new System.Drawing.Point(115, 217);
+            this.txtPrecioDulce.Name = "txtPrecioDulce";
+            this.txtPrecioDulce.Size = new System.Drawing.Size(200, 23);
+            this.txtPrecioDulce.TabIndex = 19;
+            this.txtPrecioDulce.TextChanged += new System.EventHandler(this.txtPrecioDulce_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 220);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 15);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Precio";
+            // 
+            // txtTipoDulce
+            // 
+            this.txtTipoDulce.Enabled = false;
+            this.txtTipoDulce.Location = new System.Drawing.Point(115, 81);
+            this.txtTipoDulce.Name = "txtTipoDulce";
+            this.txtTipoDulce.Size = new System.Drawing.Size(200, 23);
+            this.txtTipoDulce.TabIndex = 17;
+            this.txtTipoDulce.TextChanged += new System.EventHandler(this.txtTipoDulce_TextChanged);
+            // 
+            // txtIdDulce
+            // 
+            this.txtIdDulce.Location = new System.Drawing.Point(113, 40);
+            this.txtIdDulce.Name = "txtIdDulce";
+            this.txtIdDulce.Size = new System.Drawing.Size(202, 23);
+            this.txtIdDulce.TabIndex = 16;
+            this.txtIdDulce.TextChanged += new System.EventHandler(this.txtIdDulce_TextChanged);
+            // 
             // txtNombreDulce
             // 
             this.txtNombreDulce.Enabled = false;
-            this.txtNombreDulce.Location = new System.Drawing.Point(125, 88);
+            this.txtNombreDulce.Location = new System.Drawing.Point(113, 126);
             this.txtNombreDulce.Name = "txtNombreDulce";
-            this.txtNombreDulce.ReadOnly = true;
             this.txtNombreDulce.Size = new System.Drawing.Size(202, 23);
             this.txtNombreDulce.TabIndex = 15;
+            this.txtNombreDulce.TextChanged += new System.EventHandler(this.txtNombreDulce_TextChanged);
             // 
             // txtMarcaDulce
             // 
             this.txtMarcaDulce.Enabled = false;
-            this.txtMarcaDulce.Location = new System.Drawing.Point(127, 134);
+            this.txtMarcaDulce.Location = new System.Drawing.Point(115, 172);
             this.txtMarcaDulce.Name = "txtMarcaDulce";
             this.txtMarcaDulce.Size = new System.Drawing.Size(200, 23);
             this.txtMarcaDulce.TabIndex = 14;
+            this.txtMarcaDulce.TextChanged += new System.EventHandler(this.txtMarcaDulce_TextChanged);
             // 
             // lblTipoDulce
             // 
             this.lblTipoDulce.AutoSize = true;
-            this.lblTipoDulce.Location = new System.Drawing.Point(9, 181);
+            this.lblTipoDulce.Location = new System.Drawing.Point(11, 84);
             this.lblTipoDulce.Name = "lblTipoDulce";
             this.lblTipoDulce.Size = new System.Drawing.Size(97, 15);
             this.lblTipoDulce.TabIndex = 13;
@@ -108,26 +146,27 @@
             // 
             this.btnAgregarDulce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnAgregarDulce.Enabled = false;
-            this.btnAgregarDulce.Location = new System.Drawing.Point(194, 268);
+            this.btnAgregarDulce.Location = new System.Drawing.Point(142, 264);
             this.btnAgregarDulce.Name = "btnAgregarDulce";
             this.btnAgregarDulce.Size = new System.Drawing.Size(92, 23);
             this.btnAgregarDulce.TabIndex = 11;
-            this.btnAgregarDulce.Text = "AGREGAR";
+            this.btnAgregarDulce.Text = "Agregar";
             this.btnAgregarDulce.UseVisualStyleBackColor = false;
+            this.btnAgregarDulce.Click += new System.EventHandler(this.btnAgregarDulce_Click);
             // 
             // lblNombreDulce
             // 
             this.lblNombreDulce.AutoSize = true;
-            this.lblNombreDulce.Location = new System.Drawing.Point(6, 91);
+            this.lblNombreDulce.Location = new System.Drawing.Point(11, 129);
             this.lblNombreDulce.Name = "lblNombreDulce";
-            this.lblNombreDulce.Size = new System.Drawing.Size(102, 15);
+            this.lblNombreDulce.Size = new System.Drawing.Size(59, 15);
             this.lblNombreDulce.TabIndex = 9;
-            this.lblNombreDulce.Text = "Nombre dulce:";
+            this.lblNombreDulce.Text = "Nombre";
             // 
             // lblIdDulce
             // 
             this.lblIdDulce.AutoSize = true;
-            this.lblIdDulce.Location = new System.Drawing.Point(38, 40);
+            this.lblIdDulce.Location = new System.Drawing.Point(11, 43);
             this.lblIdDulce.Name = "lblIdDulce";
             this.lblIdDulce.Size = new System.Drawing.Size(64, 15);
             this.lblIdDulce.TabIndex = 5;
@@ -136,45 +175,11 @@
             // lblMarcaDulce
             // 
             this.lblMarcaDulce.AutoSize = true;
-            this.lblMarcaDulce.Location = new System.Drawing.Point(52, 134);
+            this.lblMarcaDulce.Location = new System.Drawing.Point(11, 175);
             this.lblMarcaDulce.Name = "lblMarcaDulce";
             this.lblMarcaDulce.Size = new System.Drawing.Size(52, 15);
             this.lblMarcaDulce.TabIndex = 7;
             this.lblMarcaDulce.Text = "Marca:";
-            // 
-            // txtIdDulce
-            // 
-            this.txtIdDulce.Enabled = false;
-            this.txtIdDulce.Location = new System.Drawing.Point(125, 40);
-            this.txtIdDulce.Name = "txtIdDulce";
-            this.txtIdDulce.ReadOnly = true;
-            this.txtIdDulce.Size = new System.Drawing.Size(202, 23);
-            this.txtIdDulce.TabIndex = 16;
-            // 
-            // txtTipoDulce
-            // 
-            this.txtTipoDulce.Enabled = false;
-            this.txtTipoDulce.Location = new System.Drawing.Point(125, 178);
-            this.txtTipoDulce.Name = "txtTipoDulce";
-            this.txtTipoDulce.Size = new System.Drawing.Size(200, 23);
-            this.txtTipoDulce.TabIndex = 17;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 225);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 15);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Precio dulce:";
-            // 
-            // txtPrecioDulce
-            // 
-            this.txtPrecioDulce.Enabled = false;
-            this.txtPrecioDulce.Location = new System.Drawing.Point(125, 217);
-            this.txtPrecioDulce.Name = "txtPrecioDulce";
-            this.txtPrecioDulce.Size = new System.Drawing.Size(200, 23);
-            this.txtPrecioDulce.TabIndex = 19;
             // 
             // pbxLogoCinemex
             // 
@@ -185,6 +190,18 @@
             this.pbxLogoCinemex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxLogoCinemex.TabIndex = 12;
             this.pbxLogoCinemex.TabStop = false;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.btnLimpiar.Enabled = false;
+            this.btnLimpiar.Location = new System.Drawing.Point(240, 264);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 39;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // frmAgregarDulceria
             // 
@@ -223,5 +240,6 @@
         private System.Windows.Forms.Label lblNombreDulce;
         private System.Windows.Forms.Label lblIdDulce;
         private System.Windows.Forms.Label lblMarcaDulce;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
