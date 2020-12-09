@@ -23,7 +23,6 @@ namespace CinemexApp
         private void frmDulceria_Load(object sender, EventArgs e)
         {
             dulceria.LlenarNombreEmpleado(lblEmpleado, DatosEmpleado.idEmpleado);
-            dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
         }
 
         private void cmbTipoDeDulce_SelectedValueChanged(object sender, EventArgs e)
@@ -64,7 +63,7 @@ namespace CinemexApp
             {
                 dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text));
                 cmbTipoDeDulce.Items.Clear();
-                dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
+                //dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
                 cmbDulce.Items.Clear();
                 txtMarca.Clear();
                 txtCantidad.Clear();
@@ -84,7 +83,7 @@ namespace CinemexApp
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             cmbTipoDeDulce.Items.Clear();
-            dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
+            //dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
             cmbDulce.Items.Clear();
             txtMarca.Clear();
             txtCantidad.Clear();
@@ -93,6 +92,12 @@ namespace CinemexApp
             txtMarca.Enabled = false;
             btnComprar.Enabled = false;
             btnLimpiar.Enabled = false;
+        }
+
+        private void cmbTipoDeDulce_Click(object sender, EventArgs e)
+        {
+            cmbTipoDeDulce.Items.Clear();
+            dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
         }
     }
 }

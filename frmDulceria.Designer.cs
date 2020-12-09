@@ -91,7 +91,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(152, 185);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 23);
-            this.txtCantidad.TabIndex = 14;
+            this.txtCantidad.TabIndex = 3;
             this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // lblCantidadBoletos
@@ -110,7 +110,7 @@
             this.btnLimpiar.Location = new System.Drawing.Point(237, 240);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiar.TabIndex = 12;
+            this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -122,7 +122,7 @@
             this.btnComprar.Location = new System.Drawing.Point(152, 240);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(75, 23);
-            this.btnComprar.TabIndex = 11;
+            this.btnComprar.TabIndex = 4;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = false;
             this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
@@ -135,7 +135,7 @@
             this.cmbDulce.Location = new System.Drawing.Point(110, 88);
             this.cmbDulce.Name = "cmbDulce";
             this.cmbDulce.Size = new System.Drawing.Size(202, 23);
-            this.cmbDulce.TabIndex = 10;
+            this.cmbDulce.TabIndex = 2;
             this.cmbDulce.SelectedValueChanged += new System.EventHandler(this.cmbDulce_SelectedValueChanged);
             // 
             // lblIdioma
@@ -163,9 +163,10 @@
             this.cmbTipoDeDulce.Location = new System.Drawing.Point(110, 37);
             this.cmbTipoDeDulce.Name = "cmbTipoDeDulce";
             this.cmbTipoDeDulce.Size = new System.Drawing.Size(202, 23);
-            this.cmbTipoDeDulce.TabIndex = 6;
+            this.cmbTipoDeDulce.TabIndex = 1;
             this.cmbTipoDeDulce.SelectedIndexChanged += new System.EventHandler(this.cmbTipoDeDulce_SelectedIndexChanged);
             this.cmbTipoDeDulce.SelectedValueChanged += new System.EventHandler(this.cmbTipoDeDulce_SelectedValueChanged);
+            this.cmbTipoDeDulce.Click += new System.EventHandler(this.cmbTipoDeDulce_Click);
             // 
             // lblFuncion
             // 

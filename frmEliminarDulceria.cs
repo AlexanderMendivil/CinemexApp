@@ -21,7 +21,6 @@ namespace CinemexApp
         private void frmEliminarDulceria_Load(object sender, EventArgs e)
         {
             dulceria.LlenarNombreEmpleado(lblEmpleado, DatosEmpleado.idEmpleado);
-            dulceria.LlenarItemsTipoDulce(cmbTipoDulce);
         }
 
         private void cmbTipoDulce_SelectedValueChanged(object sender, EventArgs e)
@@ -54,7 +53,7 @@ namespace CinemexApp
             cmbDulce.Enabled = false;
             btnBorrar.Enabled = false;
             btnLimpiar.Enabled = false;
-            dulceria.LlenarItemsTipoDulce(cmbTipoDulce);
+            //dulceria.LlenarItemsTipoDulce(cmbTipoDulce);
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -66,6 +65,12 @@ namespace CinemexApp
             cmbDulce.Enabled = false;
             btnBorrar.Enabled = false;
             btnLimpiar.Enabled = false;
+            //dulceria.LlenarItemsTipoDulce(cmbTipoDulce);
+        }
+
+        private void cmbTipoDulce_Click(object sender, EventArgs e)
+        {
+            cmbTipoDulce.Items.Clear();
             dulceria.LlenarItemsTipoDulce(cmbTipoDulce);
         }
     }

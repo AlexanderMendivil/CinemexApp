@@ -17,21 +17,18 @@ namespace CinemexApp
             InitializeComponent();
         }
 
-            ConexionDulceria dulceria = new ConexionDulceria();
+        ConexionDulceria dulceria = new ConexionDulceria();
+        Random rand = new Random();
+
         private void frmAgregarDulceria_Load(object sender, EventArgs e)
         {
             dulceria.LlenarNombreEmpleado(lblEmpleado, DatosEmpleado.idEmpleado);
         }
 
-        private void txtIdDulce_TextChanged(object sender, EventArgs e)
-        {
-            txtTipoDulce.Enabled = true;
-            btnLimpiar.Enabled = true;
-        }
-
         private void txtTipoDulce_TextChanged(object sender, EventArgs e)
         {
             txtNombreDulce.Enabled = true;
+            btnLimpiar.Enabled = true;
         }
 
         private void txtNombreDulce_TextChanged(object sender, EventArgs e)
@@ -53,13 +50,11 @@ namespace CinemexApp
         {
             try
             {
-                dulceria.Agregar(Convert.ToInt32(txtIdDulce.Text), txtTipoDulce.Text, txtNombreDulce.Text, txtMarcaDulce.Text, Convert.ToInt32(txtPrecioDulce.Text));
-                txtIdDulce.Clear();
+                dulceria.Agregar(rand.Next(), txtTipoDulce.Text, txtNombreDulce.Text, txtMarcaDulce.Text, Convert.ToInt32(txtPrecioDulce.Text));
                 txtTipoDulce.Clear();
                 txtNombreDulce.Clear();
                 txtMarcaDulce.Clear();
                 txtPrecioDulce.Clear();
-                txtTipoDulce.Enabled = false;
                 txtNombreDulce.Enabled = false;
                 txtMarcaDulce.Enabled = false;
                 txtPrecioDulce.Enabled = false;
@@ -74,12 +69,10 @@ namespace CinemexApp
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            txtIdDulce.Clear();
             txtTipoDulce.Clear();
             txtNombreDulce.Clear();
             txtMarcaDulce.Clear();
             txtPrecioDulce.Clear();
-            txtTipoDulce.Enabled = false;
             txtNombreDulce.Enabled = false;
             txtMarcaDulce.Enabled = false;
             txtPrecioDulce.Enabled = false;

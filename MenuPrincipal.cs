@@ -86,7 +86,7 @@ namespace CinemexApp
         }
         private void AbrirForm<SubForm>() where SubForm : Form, new()
         {
-            Form frmChild;
+            Form frmChild = new Form();
             frmChild = pnlChildForms.Controls.OfType<SubForm>().FirstOrDefault();
 
             if (frmChild == null)

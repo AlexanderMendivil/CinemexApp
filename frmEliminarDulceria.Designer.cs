@@ -358,7 +358,7 @@
             this.btnLimpiar.Location = new System.Drawing.Point(243, 266);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiar.TabIndex = 38;
+            this.btnLimpiar.TabIndex = 4;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -370,8 +370,9 @@
             this.cmbTipoDulce.Location = new System.Drawing.Point(119, 40);
             this.cmbTipoDulce.Name = "cmbTipoDulce";
             this.cmbTipoDulce.Size = new System.Drawing.Size(200, 23);
-            this.cmbTipoDulce.TabIndex = 35;
+            this.cmbTipoDulce.TabIndex = 1;
             this.cmbTipoDulce.SelectedValueChanged += new System.EventHandler(this.cmbTipoDulce_SelectedValueChanged);
+            this.cmbTipoDulce.Click += new System.EventHandler(this.cmbTipoDulce_Click);
             // 
             // cmbDulce
             // 
@@ -381,7 +382,7 @@
             this.cmbDulce.Location = new System.Drawing.Point(119, 93);
             this.cmbDulce.Name = "cmbDulce";
             this.cmbDulce.Size = new System.Drawing.Size(200, 23);
-            this.cmbDulce.TabIndex = 34;
+            this.cmbDulce.TabIndex = 2;
             this.cmbDulce.SelectedValueChanged += new System.EventHandler(this.cmbDulce_SelectedValueChanged);
             // 
             // txtPrecio
@@ -416,7 +417,7 @@
             this.btnBorrar.Location = new System.Drawing.Point(145, 266);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(92, 23);
-            this.btnBorrar.TabIndex = 28;
+            this.btnBorrar.TabIndex = 3;
             this.btnBorrar.Text = "Eliminar";
             this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);

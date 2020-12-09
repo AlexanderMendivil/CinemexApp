@@ -56,7 +56,7 @@ namespace CinemexApp
         {
             try
             {
-                cmd = new SqlCommand("select tipo from DULCE", conexion);
+                cmd = new SqlCommand("select tipo from DULCE group by tipo", conexion);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
