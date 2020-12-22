@@ -53,37 +53,37 @@ namespace CinemexApp
 
         }
 
-        private void pbTaquilla_Click(object sender, EventArgs e)
-        {
+        //private void pbTaquilla_Click(object sender, EventArgs e)
+        //{
 
-            pnlContainerTaquilla.Visible = true;
+        //    pnlContainerTaquilla.Visible = true;
 
-            if (visible == false)
-            {
-                visible = true;
-            }
-            else
-            {
-                pnlContainerTaquilla.Visible = false;
-                visible = false;
-            }
-        }
+        //    if (visible == false)
+        //    {
+        //        visible = true;
+        //    }
+        //    else
+        //    {
+        //        pnlContainerTaquilla.Visible = false;
+        //        visible = false;
+        //    }
+        //}
 
-        private void pbDulceria_Click(object sender, EventArgs e)
-        {
+        //private void pbDulceria_Click(object sender, EventArgs e)
+        //{
 
-            pnlContainerDulceria.Visible = true;
+        //    pnlContainerDulceria.Visible = true;
 
-            if (visible == false)
-            {
-                visible = true;
-            }
-            else
-            {
-                pnlContainerDulceria.Visible = false;
-                visible = false;
-            }
-        }
+        //    if (visible == false)
+        //    {
+        //        visible = true;
+        //    }
+        //    else
+        //    {
+        //        pnlContainerDulceria.Visible = false;
+        //        visible = false;
+        //    }
+        //}
         private void AbrirForm<SubForm>() where SubForm : Form, new()
         {
             Form frmChild = new Form();
@@ -105,44 +105,14 @@ namespace CinemexApp
             }
         }
 
-        public void btnConsultarDulceria_Click(object sender, EventArgs e)
+        private void pbTaquilla_Click(object sender, EventArgs e)
         {
-            AbrirForm<frmDulceria>();
+            AbrirForm<frmCartelera>();
         }
 
-        private void btnConsultarTaquilla_Click(object sender, EventArgs e)
+        private void pbDulceria_Click(object sender, EventArgs e)
         {
-            AbrirForm<frmTaquilla>();
-        }
-
-        private void btnAgregarDulceria_Click(object sender, EventArgs e)
-        {
-            AbrirForm<frmAgregarDulceria>();
-        }
-
-        private void btnEliminarDulceria_Click(object sender, EventArgs e)
-        {
-            AbrirForm<frmEliminarDulceria>();
-        }
-
-        private void btnModificarDulceria_Click(object sender, EventArgs e)
-        {
-            AbrirForm<frmModificarDulce>();
-        }
-
-        private void btnModificarTaquilla_Click(object sender, EventArgs e)
-        {
-            AbrirForm<frmModificarTaquilla>();
-        }
-
-        private void btnElimarTaquilla_Click(object sender, EventArgs e)
-        {
-            AbrirForm<frmEliminarTaquilla>();
-        }
-
-        private void btnAgregarTaquilla_Click(object sender, EventArgs e)
-        {
-            AbrirForm<frmAgregarTaquilla>();
+            AbrirForm<frmCandyshop>();
         }
     }
 }

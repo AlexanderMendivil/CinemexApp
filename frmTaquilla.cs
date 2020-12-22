@@ -72,5 +72,10 @@ namespace CinemexApp
         {
             btnComprar.Enabled = true;
         }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

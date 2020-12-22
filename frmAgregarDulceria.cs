@@ -12,19 +12,19 @@ namespace CinemexApp
 {
     public partial class frmAgregarDulceria : Form
     {
-        public frmAgregarDulceria()
-        {
-            InitializeComponent();
-        }
-
         ConexionDulceria dulceria = new ConexionDulceria();
         Random rand = new Random();
 
+        public frmAgregarDulceria()
+        {
+            InitializeComponent();
+        }      
         private void frmAgregarDulceria_Load(object sender, EventArgs e)
         {
             dulceria.LlenarNombreEmpleado(lblEmpleado, DatosEmpleado.idEmpleado);
         }
 
+        #region textbox
         private void txtTipoDulce_TextChanged(object sender, EventArgs e)
         {
             txtNombreDulce.Enabled = true;
@@ -45,7 +45,9 @@ namespace CinemexApp
         {
             btnAgregarDulce.Enabled = true;
         }
+        #endregion
 
+        #region Agregar y Limpiar 
         private void btnAgregarDulce_Click(object sender, EventArgs e)
         {
             try
@@ -79,5 +81,6 @@ namespace CinemexApp
             btnAgregarDulce.Enabled = false;
             btnLimpiar.Enabled = false;
         }
+        #endregion
     }
 }

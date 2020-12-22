@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -60,6 +63,18 @@
     </Compile>
     <Compile Include="frmAgregarTaquilla.Designer.cs">
       <DependentUpon>frmAgregarTaquilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCandyshop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCandyshop.Designer.cs">
+      <DependentUpon>frmCandyshop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCartelera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCartelera.Designer.cs">
+      <DependentUpon>frmCartelera.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDulceria.cs">
       <SubType>Form</SubType>
@@ -117,6 +132,12 @@
     <EmbeddedResource Include="frmAgregarTaquilla.resx">
       <DependentUpon>frmAgregarTaquilla.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCandyshop.resx">
+      <DependentUpon>frmCandyshop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCartelera.resx">
+      <DependentUpon>frmCartelera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDulceria.resx">
       <DependentUpon>frmDulceria.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +167,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

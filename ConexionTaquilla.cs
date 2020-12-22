@@ -21,7 +21,7 @@ namespace CinemexApp
             try
             {
                 //conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
-                conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=DESKTOP-EAET5MJ;Initial Catalog=CINEMEX;Integrated Security=True");
                 conexion.Open();
             }
             catch (Exception ex)
@@ -104,16 +104,16 @@ namespace CinemexApp
             }
         }
 
-        public void Comprar(string nombreDulce, int cant)
+        public void Comprar(string nombrePel, int cant)
         {
             try
             {
-                cmd = new SqlCommand("select precio from DULCE where nombreDulce = '" + nombreDulce + "'", conexion);
+                cmd = new SqlCommand("select precio from PELICULA where nombrePelicula = '" + nombrePel + "'", conexion);
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
                     int precioFinal = cant * Convert.ToInt32(dr["precio"].ToString());
-                    MessageBox.Show("Se compraron " + cant + " " + nombreDulce + " por $" + precioFinal + " pesos");
+                    MessageBox.Show("Se compraron " + cant + " " + nombrePel + " por $" + precioFinal + " pesos");
                 }
                 dr.Close();
             }
@@ -122,7 +122,50 @@ namespace CinemexApp
                 MessageBox.Show("No se pudo realizar la compra " + ex.ToString());
             }
         }
+        public void Modificar(string PeliculaSelect, string nombrePel, string Anio, string genero, string director, string duracion)
+        {
+            try
+            {
+                cmd = new SqlCommand("update PELICULA set nombrepelicula = '" + nombrePel + "', ano = '" + Anio + "', genero = '" + genero + "', director = '" + director + "' where nombreDulce = '" + PeliculaSelect + "'", conexion);
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                MessageBox.Show("Los cambios se aplicaron correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudieron aplicar los cambios " + ex.ToString());
+            }
+        }
 
+        public void Eliminar(string PeliculaSelect)
+        {
+            try
+            {
+                cmd = new SqlCommand("delete from PELICULA WHERE nombrePel = '" + PeliculaSelect + "'", conexion);
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                MessageBox.Show("La Pelicula " + PeliculaSelect + " se eliminó correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo eliminar la pelicula " + PeliculaSelect + ex.ToString());
+            }
+        }
+
+        public void Agregar(int idPelicula, string nombrePel, string Anio, string genero, string director, string duracion)
+        {
+            try
+            {
+                cmd = new SqlCommand("insert into PELICULA values('" + idPelicula + "', '" + nombrePel + "', '" + Anio+ "', '" + genero + "', '"+ director + "', '"+ duracion + "')", conexion);
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                MessageBox.Show("La pelicula " + nombrePel + " se añadió correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo añadir el producto " + nombrePel + ex.ToString());
+            }
+        }
         public void PeliculaSeleccionada(string nombrePelicula)
         {
             nombrePeliculas = nombrePelicula;
