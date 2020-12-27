@@ -61,7 +61,7 @@
             // 
             this.lblEmpleado.AutoSize = true;
             this.lblEmpleado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpleado.ForeColor = System.Drawing.Color.White;
+            this.lblEmpleado.ForeColor = System.Drawing.Color.Black;
             this.lblEmpleado.Location = new System.Drawing.Point(501, 43);
             this.lblEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmpleado.Name = "lblEmpleado";
@@ -104,7 +104,7 @@
             // lblCantidadBoletos
             // 
             this.lblCantidadBoletos.AutoSize = true;
-            this.lblCantidadBoletos.ForeColor = System.Drawing.Color.White;
+            this.lblCantidadBoletos.ForeColor = System.Drawing.Color.Black;
             this.lblCantidadBoletos.Location = new System.Drawing.Point(27, 231);
             this.lblCantidadBoletos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidadBoletos.Name = "lblCantidadBoletos";
@@ -116,7 +116,7 @@
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnLimpiar.Enabled = false;
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.Location = new System.Drawing.Point(316, 295);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
@@ -129,7 +129,7 @@
             // 
             this.btnComprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnComprar.Enabled = false;
-            this.btnComprar.ForeColor = System.Drawing.Color.White;
+            this.btnComprar.ForeColor = System.Drawing.Color.Black;
             this.btnComprar.Location = new System.Drawing.Point(203, 295);
             this.btnComprar.Margin = new System.Windows.Forms.Padding(4);
             this.btnComprar.Name = "btnComprar";
@@ -154,7 +154,7 @@
             // lblIdioma
             // 
             this.lblIdioma.AutoSize = true;
-            this.lblIdioma.ForeColor = System.Drawing.Color.White;
+            this.lblIdioma.ForeColor = System.Drawing.Color.Black;
             this.lblIdioma.Location = new System.Drawing.Point(27, 108);
             this.lblIdioma.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdioma.Name = "lblIdioma";
@@ -177,7 +177,7 @@
             // lblPelicula
             // 
             this.lblPelicula.AutoSize = true;
-            this.lblPelicula.ForeColor = System.Drawing.Color.White;
+            this.lblPelicula.ForeColor = System.Drawing.Color.Black;
             this.lblPelicula.Location = new System.Drawing.Point(27, 49);
             this.lblPelicula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPelicula.Name = "lblPelicula";
@@ -199,7 +199,7 @@
             // lblFuncion
             // 
             this.lblFuncion.AutoSize = true;
-            this.lblFuncion.ForeColor = System.Drawing.Color.White;
+            this.lblFuncion.ForeColor = System.Drawing.Color.Black;
             this.lblFuncion.Location = new System.Drawing.Point(27, 169);
             this.lblFuncion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFuncion.Name = "lblFuncion";
