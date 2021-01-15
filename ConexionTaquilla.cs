@@ -21,7 +21,8 @@ namespace CinemexApp
             try
             {
                 //conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
-                conexion = new SqlConnection("Data Source=DESKTOP-EAET5MJ;Initial Catalog=CINEMEX;Integrated Security=True");
+                //conexion = new SqlConnection("Data Source=DESKTOP-EAET5MJ;Initial Catalog=CINEMEX;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
                 conexion.Open();
             }
             catch (Exception ex)
@@ -104,22 +105,25 @@ namespace CinemexApp
             }
         }
 
-        public void Comprar(string nombrePel, int cant)
+        public string Comprar(string nombrePel, int cant)
         {
             try
             {
-                cmd = new SqlCommand("select precio from PELICULA where nombrePelicula = '" + nombrePel + "'", conexion);
+                cmd = new SqlCommand("select precio from FUNCION where idPelicula in(select idPelicula from PELICULA where nombrePelicula = '"+nombrePel+"')", conexion);
                 dr = cmd.ExecuteReader();
+                int precioFinal = 0;
                 if (dr.Read())
                 {
-                    int precioFinal = cant * Convert.ToInt32(dr["precio"].ToString());
-                    MessageBox.Show("Se compraron " + cant + " " + nombrePel + " por $" + precioFinal + " pesos");
+                    precioFinal = cant * Convert.ToInt32(dr["precio"].ToString());
+                    //MessageBox.Show("Se compraron " + cant + " " + nombrePel + " por $" + precioFinal + " pesos");
                 }
                 dr.Close();
+                return precioFinal.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("No se pudo realizar la compra " + ex.ToString());
+                //MessageBox.Show("No se pudo realizar la compra " + ex.ToString());
+                return "";
             }
         }
         public void Modificar(string PeliculaSelect, string nombrePel, string Anio, string genero, string director, string duracion)

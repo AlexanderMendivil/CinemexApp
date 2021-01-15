@@ -73,6 +73,56 @@ namespace CinemexApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_add_box_white_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_add_box_white_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_delete_outline_white_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_delete_outline_white_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_disabled_by_default_white_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_disabled_by_default_white_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_storefront_white_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_storefront_white_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_update_white_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_update_white_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cartelera {
             get {
                 object obj = ResourceManager.GetObject("cartelera", resourceCulture);

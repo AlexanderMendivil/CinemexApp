@@ -40,9 +40,18 @@
             this.lblPelicula = new System.Windows.Forms.Label();
             this.cmbTipoDeDulce = new System.Windows.Forms.ComboBox();
             this.lblFuncion = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.pbxLogoCinemex = new System.Windows.Forms.PictureBox();
+            this.dgvDulces = new System.Windows.Forms.DataGridView();
+            this.ColumnTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDulce = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLimpiarDgv = new System.Windows.Forms.Button();
+            this.btnCompraFinal = new System.Windows.Forms.Button();
             this.gbxPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogoCinemex)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDulces)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEmpleado
@@ -123,7 +132,7 @@
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(75, 23);
             this.btnComprar.TabIndex = 4;
-            this.btnComprar.Text = "Comprar";
+            this.btnComprar.Text = "Agregar";
             this.btnComprar.UseVisualStyleBackColor = false;
             this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
@@ -177,22 +186,100 @@
             this.lblFuncion.TabIndex = 7;
             this.lblFuncion.Text = "Marca:";
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.btnCerrar.Image = global::CinemexApp.Properties.Resources.baseline_disabled_by_default_white_18dp;
+            this.btnCerrar.Location = new System.Drawing.Point(771, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(27, 24);
+            this.btnCerrar.TabIndex = 14;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // pbxLogoCinemex
             // 
             this.pbxLogoCinemex.Image = global::CinemexApp.Properties.Resources._5ef1c4e91cfbc200047e7430;
-            this.pbxLogoCinemex.Location = new System.Drawing.Point(369, 72);
+            this.pbxLogoCinemex.Location = new System.Drawing.Point(626, 35);
             this.pbxLogoCinemex.Name = "pbxLogoCinemex";
-            this.pbxLogoCinemex.Size = new System.Drawing.Size(308, 204);
+            this.pbxLogoCinemex.Size = new System.Drawing.Size(172, 117);
             this.pbxLogoCinemex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxLogoCinemex.TabIndex = 11;
             this.pbxLogoCinemex.TabStop = false;
+            // 
+            // dgvDulces
+            // 
+            this.dgvDulces.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvDulces.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDulces.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnTipo,
+            this.ColumnDulce,
+            this.ColumnMarca,
+            this.ColumnPrecio});
+            this.dgvDulces.Location = new System.Drawing.Point(351, 158);
+            this.dgvDulces.Name = "dgvDulces";
+            this.dgvDulces.Size = new System.Drawing.Size(447, 161);
+            this.dgvDulces.TabIndex = 15;
+            // 
+            // ColumnTipo
+            // 
+            this.ColumnTipo.HeaderText = "Tipo de dulce";
+            this.ColumnTipo.Name = "ColumnTipo";
+            // 
+            // ColumnDulce
+            // 
+            this.ColumnDulce.HeaderText = "Dulce";
+            this.ColumnDulce.Name = "ColumnDulce";
+            this.ColumnDulce.ReadOnly = true;
+            // 
+            // ColumnMarca
+            // 
+            this.ColumnMarca.HeaderText = "Marca";
+            this.ColumnMarca.Name = "ColumnMarca";
+            this.ColumnMarca.ReadOnly = true;
+            // 
+            // ColumnPrecio
+            // 
+            this.ColumnPrecio.HeaderText = "Precio total";
+            this.ColumnPrecio.Name = "ColumnPrecio";
+            this.ColumnPrecio.ReadOnly = true;
+            // 
+            // btnLimpiarDgv
+            // 
+            this.btnLimpiarDgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.btnLimpiarDgv.Enabled = false;
+            this.btnLimpiarDgv.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarDgv.Location = new System.Drawing.Point(723, 325);
+            this.btnLimpiarDgv.Name = "btnLimpiarDgv";
+            this.btnLimpiarDgv.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiarDgv.TabIndex = 16;
+            this.btnLimpiarDgv.Text = "Limpiar";
+            this.btnLimpiarDgv.UseVisualStyleBackColor = false;
+            this.btnLimpiarDgv.Click += new System.EventHandler(this.btnLimpiarDgv_Click);
+            // 
+            // btnCompraFinal
+            // 
+            this.btnCompraFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.btnCompraFinal.Enabled = false;
+            this.btnCompraFinal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompraFinal.Location = new System.Drawing.Point(642, 325);
+            this.btnCompraFinal.Name = "btnCompraFinal";
+            this.btnCompraFinal.Size = new System.Drawing.Size(75, 23);
+            this.btnCompraFinal.TabIndex = 17;
+            this.btnCompraFinal.Text = "Comprar";
+            this.btnCompraFinal.UseVisualStyleBackColor = false;
+            this.btnCompraFinal.Click += new System.EventHandler(this.btnCompraFinal_Click);
             // 
             // frmDulceria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(738, 351);
+            this.ClientSize = new System.Drawing.Size(810, 359);
+            this.Controls.Add(this.btnCompraFinal);
+            this.Controls.Add(this.btnLimpiarDgv);
+            this.Controls.Add(this.dgvDulces);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.gbxPrincipal);
             this.Controls.Add(this.pbxLogoCinemex);
@@ -200,11 +287,11 @@
             this.Name = "frmDulceria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDulceria";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmDulceria_Load);
             this.gbxPrincipal.ResumeLayout(false);
             this.gbxPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogoCinemex)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDulces)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +311,13 @@
         private System.Windows.Forms.Label lblFuncion;
         private System.Windows.Forms.PictureBox pbxLogoCinemex;
         private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.DataGridView dgvDulces;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDulce;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrecio;
+        private System.Windows.Forms.Button btnLimpiarDgv;
+        private System.Windows.Forms.Button btnCompraFinal;
     }
 }

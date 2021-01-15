@@ -66,3 +66,7 @@ C:\Users\Dell\Documents\CinemexApp\obj\Debug\CinemexApp.csproj.GenerateResource.
 C:\Users\Dell\Documents\CinemexApp\obj\Debug\CinemexApp.csproj.CoreCompileInputs.cache
 C:\Users\Dell\Documents\CinemexApp\obj\Debug\CinemexApp.exe
 C:\Users\Dell\Documents\CinemexApp\obj\Debug\CinemexApp.pdb
+C:\Git_Prueba\Bases_De_Datos\CinemexApp\bin\Debug\FontAwesome.Sharp.dll
+C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.frmCandyshop.resources
+C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.frmCartelera.resources
+C:\Git_Prueba\Bases_De_Datos\CinemexApp\obj\Debug\CinemexApp.csproj.CopyComplete

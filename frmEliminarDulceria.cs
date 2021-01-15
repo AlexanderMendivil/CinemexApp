@@ -73,5 +73,10 @@ namespace CinemexApp
             cmbTipoDulce.Items.Clear();
             dulceria.LlenarItemsTipoDulce(cmbTipoDulce);
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

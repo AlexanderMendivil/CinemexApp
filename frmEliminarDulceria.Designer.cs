@@ -65,6 +65,7 @@
             this.lblDulceSelect = new System.Windows.Forms.Label();
             this.lblTipoDulceSelect = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.gbxPrincipal.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogoCinemex)).BeginInit();
@@ -449,18 +450,31 @@
             this.lblMarca.TabIndex = 26;
             this.lblMarca.Text = "Marca";
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.btnCerrar.Image = global::CinemexApp.Properties.Resources.baseline_disabled_by_default_white_18dp;
+            this.btnCerrar.Location = new System.Drawing.Point(699, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(27, 24);
+            this.btnCerrar.TabIndex = 19;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // frmEliminarDulceria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(738, 351);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.pbxLogoCinemex);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbxPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEliminarDulceria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEliminarDulceria";
             this.Load += new System.EventHandler(this.frmEliminarDulceria_Load);
             this.gbxPrincipal.ResumeLayout(false);
@@ -514,5 +528,6 @@
         private System.Windows.Forms.Label lblDulceSelect;
         private System.Windows.Forms.Label lblTipoDulceSelect;
         private System.Windows.Forms.Label lblMarca;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

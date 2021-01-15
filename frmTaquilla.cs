@@ -14,6 +14,8 @@ namespace CinemexApp
 {
     public partial class frmTaquilla : Form
     {
+        private int sumaTotal = 0;
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -70,12 +72,76 @@ namespace CinemexApp
 
         private void cmbFuncion_SelectedValueChanged(object sender, EventArgs e)
         {
-            btnComprar.Enabled = true;
+            txtCantidad.Enabled = true;
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                dgvTaquilla.Rows.Add(cmbPelícula.SelectedItem.ToString(),
+                cmbIdioma.SelectedItem.ToString(),
+                cmbFuncion.SelectedItem.ToString(), txtCantidad.Text,
+                taquilla.Comprar(cmbPelícula.SelectedItem.ToString(),
+                Convert.ToInt32(txtCantidad.Text)));
+                sumaTotal = sumaTotal + Convert.ToInt32(taquilla.Comprar(cmbPelícula.SelectedItem.ToString(),
+                    Convert.ToInt32(txtCantidad.Text)));
+                btnCompraFinal.Enabled = true;
+                btnLimpiarDgv.Enabled = true;
+                LimpiarTodo();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Indique la cantidad de boletos");
+            }
+        }
 
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void LimpiarTodo()
+        {
+            cmbPelícula.Items.Clear();
+            cmbIdioma.Items.Clear();
+            cmbFuncion.Items.Clear();
+            txtCantidad.Clear();
+            btnComprar.Enabled = false;
+            btnLimpiar.Enabled = false;
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarTodo();
+        }
+
+        private void btnCompraFinal_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Compra realizada por $" + sumaTotal + " pesos");
+            dgvTaquilla.Rows.Clear();
+            sumaTotal = 0;
+            btnCompraFinal.Enabled = false;
+            btnLimpiarDgv.Enabled = false;
+        }
+
+        private void btnLimpiarDgv_Click(object sender, EventArgs e)
+        {
+            dgvTaquilla.Rows.Clear();
+            sumaTotal = 0;
+            btnCompraFinal.Enabled = false;
+            btnLimpiarDgv.Enabled = false;
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            btnComprar.Enabled = true;
+        }
+
+        private void cmbPelícula_Click(object sender, EventArgs e)
+        {
+            cmbPelícula.Items.Clear();
+            taquilla.LlenarItemsPelicula(cmbPelícula);
         }
     }
 }

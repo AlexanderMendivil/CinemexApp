@@ -33,11 +33,23 @@
             this.lblCerra = new System.Windows.Forms.Label();
             this.lblMinimo = new System.Windows.Forms.Label();
             this.pnlChildForms = new System.Windows.Forms.Panel();
+            this.pnlBotonesCartelera = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.pnlBotonesDulceria = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pbTaquilla = new System.Windows.Forms.PictureBox();
             this.pbDulceria = new System.Windows.Forms.PictureBox();
             this.pcLogo = new System.Windows.Forms.PictureBox();
             this.pnlBot.SuspendLayout();
             this.pnlChildForms.SuspendLayout();
+            this.pnlBotonesCartelera.SuspendLayout();
+            this.pnlBotonesDulceria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTaquilla)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDulceria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcLogo)).BeginInit();
@@ -47,10 +59,9 @@
             // 
             this.pnlBot.Controls.Add(this.lblSloganCinemex);
             this.pnlBot.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBot.Location = new System.Drawing.Point(0, 694);
-            this.pnlBot.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlBot.Location = new System.Drawing.Point(0, 564);
             this.pnlBot.Name = "pnlBot";
-            this.pnlBot.Size = new System.Drawing.Size(1356, 81);
+            this.pnlBot.Size = new System.Drawing.Size(1017, 66);
             this.pnlBot.TabIndex = 13;
             // 
             // lblSloganCinemex
@@ -58,10 +69,9 @@
             this.lblSloganCinemex.AutoSize = true;
             this.lblSloganCinemex.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSloganCinemex.ForeColor = System.Drawing.Color.White;
-            this.lblSloganCinemex.Location = new System.Drawing.Point(585, 22);
-            this.lblSloganCinemex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSloganCinemex.Location = new System.Drawing.Point(391, 17);
             this.lblSloganCinemex.Name = "lblSloganCinemex";
-            this.lblSloganCinemex.Size = new System.Drawing.Size(323, 37);
+            this.lblSloganCinemex.Size = new System.Drawing.Size(247, 30);
             this.lblSloganCinemex.TabIndex = 4;
             this.lblSloganCinemex.Text = "“Esta es la magia del cine”";
             this.lblSloganCinemex.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -72,10 +82,9 @@
             this.lblCerra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCerra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerra.ForeColor = System.Drawing.Color.White;
-            this.lblCerra.Location = new System.Drawing.Point(1299, 11);
-            this.lblCerra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCerra.Location = new System.Drawing.Point(974, 9);
             this.lblCerra.Name = "lblCerra";
-            this.lblCerra.Size = new System.Drawing.Size(24, 28);
+            this.lblCerra.Size = new System.Drawing.Size(19, 21);
             this.lblCerra.TabIndex = 18;
             this.lblCerra.Text = "X";
             this.lblCerra.Click += new System.EventHandler(this.lblCerra_Click);
@@ -86,51 +95,194 @@
             this.lblMinimo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimo.ForeColor = System.Drawing.Color.White;
-            this.lblMinimo.Location = new System.Drawing.Point(1218, 11);
-            this.lblMinimo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMinimo.Location = new System.Drawing.Point(914, 9);
             this.lblMinimo.Name = "lblMinimo";
-            this.lblMinimo.Size = new System.Drawing.Size(28, 28);
+            this.lblMinimo.Size = new System.Drawing.Size(24, 21);
             this.lblMinimo.TabIndex = 17;
             this.lblMinimo.Text = "__";
             this.lblMinimo.Click += new System.EventHandler(this.lblMinimo_Click);
             // 
             // pnlChildForms
             // 
+            this.pnlChildForms.Controls.Add(this.pnlBotonesCartelera);
+            this.pnlChildForms.Controls.Add(this.pnlBotonesDulceria);
             this.pnlChildForms.Controls.Add(this.pbTaquilla);
             this.pnlChildForms.Controls.Add(this.pbDulceria);
             this.pnlChildForms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlChildForms.Location = new System.Drawing.Point(0, 137);
-            this.pnlChildForms.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlChildForms.Location = new System.Drawing.Point(0, 112);
             this.pnlChildForms.Name = "pnlChildForms";
-            this.pnlChildForms.Size = new System.Drawing.Size(1356, 557);
+            this.pnlChildForms.Size = new System.Drawing.Size(1017, 452);
             this.pnlChildForms.TabIndex = 20;
+            // 
+            // pnlBotonesCartelera
+            // 
+            this.pnlBotonesCartelera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.pnlBotonesCartelera.Controls.Add(this.button5);
+            this.pnlBotonesCartelera.Controls.Add(this.button6);
+            this.pnlBotonesCartelera.Controls.Add(this.button7);
+            this.pnlBotonesCartelera.Controls.Add(this.button8);
+            this.pnlBotonesCartelera.Location = new System.Drawing.Point(172, 310);
+            this.pnlBotonesCartelera.Name = "pnlBotonesCartelera";
+            this.pnlBotonesCartelera.Size = new System.Drawing.Size(229, 56);
+            this.pnlBotonesCartelera.TabIndex = 17;
+            this.pnlBotonesCartelera.Visible = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.button5.Image = global::CinemexApp.Properties.Resources.baseline_update_white_18dp;
+            this.button5.Location = new System.Drawing.Point(174, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(51, 50);
+            this.button5.TabIndex = 3;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button5_MouseClick);
+            this.button5.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.button6.Image = global::CinemexApp.Properties.Resources.baseline_delete_outline_white_18dp;
+            this.button6.Location = new System.Drawing.Point(117, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(51, 50);
+            this.button6.TabIndex = 2;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button6_MouseClick);
+            this.button6.MouseEnter += new System.EventHandler(this.button6_MouseEnter);
+            this.button6.MouseLeave += new System.EventHandler(this.button6_MouseLeave);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.button7.Image = global::CinemexApp.Properties.Resources.baseline_add_box_white_18dp;
+            this.button7.Location = new System.Drawing.Point(60, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(51, 50);
+            this.button7.TabIndex = 1;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button7_MouseClick);
+            this.button7.MouseEnter += new System.EventHandler(this.button7_MouseEnter);
+            this.button7.MouseLeave += new System.EventHandler(this.button7_MouseLeave);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.button8.Image = global::CinemexApp.Properties.Resources.baseline_storefront_white_18dp;
+            this.button8.Location = new System.Drawing.Point(3, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(51, 50);
+            this.button8.TabIndex = 0;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button8_MouseClick);
+            this.button8.MouseEnter += new System.EventHandler(this.button8_MouseEnter);
+            this.button8.MouseLeave += new System.EventHandler(this.button8_MouseLeave);
+            // 
+            // pnlBotonesDulceria
+            // 
+            this.pnlBotonesDulceria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.pnlBotonesDulceria.Controls.Add(this.button4);
+            this.pnlBotonesDulceria.Controls.Add(this.button3);
+            this.pnlBotonesDulceria.Controls.Add(this.button2);
+            this.pnlBotonesDulceria.Controls.Add(this.button1);
+            this.pnlBotonesDulceria.Location = new System.Drawing.Point(620, 310);
+            this.pnlBotonesDulceria.Name = "pnlBotonesDulceria";
+            this.pnlBotonesDulceria.Size = new System.Drawing.Size(229, 56);
+            this.pnlBotonesDulceria.TabIndex = 16;
+            this.pnlBotonesDulceria.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.button4.Image = global::CinemexApp.Properties.Resources.baseline_update_white_18dp;
+            this.button4.Location = new System.Drawing.Point(174, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(51, 50);
+            this.button4.TabIndex = 3;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button4_MouseClick);
+            this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
+            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.button3.Image = global::CinemexApp.Properties.Resources.baseline_delete_outline_white_18dp;
+            this.button3.Location = new System.Drawing.Point(117, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(51, 50);
+            this.button3.TabIndex = 2;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button3_MouseClick);
+            this.button3.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
+            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
+            this.button3.MouseHover += new System.EventHandler(this.button3_MouseHover);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.button2.Image = global::CinemexApp.Properties.Resources.baseline_add_box_white_18dp;
+            this.button2.Location = new System.Drawing.Point(60, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(51, 50);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
+            this.button2.MouseHover += new System.EventHandler(this.button2_MouseHover);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.button1.Image = global::CinemexApp.Properties.Resources.baseline_storefront_white_18dp;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 50);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
             // pbTaquilla
             // 
             this.pbTaquilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.pbTaquilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbTaquilla.Image = global::CinemexApp.Properties.Resources.cartelera;
-            this.pbTaquilla.Location = new System.Drawing.Point(160, 161);
-            this.pbTaquilla.Margin = new System.Windows.Forms.Padding(4);
+            this.pbTaquilla.Location = new System.Drawing.Point(120, 131);
             this.pbTaquilla.Name = "pbTaquilla";
-            this.pbTaquilla.Size = new System.Drawing.Size(434, 213);
+            this.pbTaquilla.Size = new System.Drawing.Size(326, 173);
             this.pbTaquilla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbTaquilla.TabIndex = 14;
             this.pbTaquilla.TabStop = false;
             this.pbTaquilla.Click += new System.EventHandler(this.pbTaquilla_Click);
+            this.pbTaquilla.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbTaquilla_MouseClick);
+            this.pbTaquilla.MouseLeave += new System.EventHandler(this.pbTaquilla_MouseLeave);
+            this.pbTaquilla.MouseHover += new System.EventHandler(this.pbTaquilla_MouseHover);
             // 
             // pbDulceria
             // 
             this.pbDulceria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbDulceria.Image = global::CinemexApp.Properties.Resources.dulces;
-            this.pbDulceria.Location = new System.Drawing.Point(776, 161);
-            this.pbDulceria.Margin = new System.Windows.Forms.Padding(4);
+            this.pbDulceria.Location = new System.Drawing.Point(582, 131);
             this.pbDulceria.Name = "pbDulceria";
-            this.pbDulceria.Size = new System.Drawing.Size(402, 213);
+            this.pbDulceria.Size = new System.Drawing.Size(302, 173);
             this.pbDulceria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDulceria.TabIndex = 15;
             this.pbDulceria.TabStop = false;
             this.pbDulceria.Click += new System.EventHandler(this.pbDulceria_Click);
+            this.pbDulceria.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbDulceria_MouseClick);
+            this.pbDulceria.MouseLeave += new System.EventHandler(this.pbDulceria_MouseLeave);
+            this.pbDulceria.MouseHover += new System.EventHandler(this.pbDulceria_MouseHover);
             // 
             // pcLogo
             // 
@@ -139,9 +291,8 @@
             this.pcLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pcLogo.Image = global::CinemexApp.Properties.Resources.logoCine;
             this.pcLogo.Location = new System.Drawing.Point(0, 0);
-            this.pcLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pcLogo.Name = "pcLogo";
-            this.pcLogo.Size = new System.Drawing.Size(1356, 137);
+            this.pcLogo.Size = new System.Drawing.Size(1017, 112);
             this.pcLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcLogo.TabIndex = 16;
             this.pcLogo.TabStop = false;
@@ -149,23 +300,24 @@
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(1356, 775);
+            this.ClientSize = new System.Drawing.Size(1017, 630);
             this.Controls.Add(this.pnlChildForms);
             this.Controls.Add(this.lblCerra);
             this.Controls.Add(this.lblMinimo);
             this.Controls.Add(this.pcLogo);
             this.Controls.Add(this.pnlBot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuPrincipal";
             this.Text = "CINEMEX";
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.pnlBot.ResumeLayout(false);
             this.pnlBot.PerformLayout();
             this.pnlChildForms.ResumeLayout(false);
+            this.pnlBotonesCartelera.ResumeLayout(false);
+            this.pnlBotonesDulceria.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbTaquilla)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDulceria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcLogo)).EndInit();
@@ -183,6 +335,16 @@
         private System.Windows.Forms.Panel pnlChildForms;
         private System.Windows.Forms.PictureBox pbTaquilla;
         private System.Windows.Forms.PictureBox pbDulceria;
+        private System.Windows.Forms.Panel pnlBotonesDulceria;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel pnlBotonesCartelera;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
 

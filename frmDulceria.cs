@@ -13,7 +13,7 @@ namespace CinemexApp
 {
     public partial class frmDulceria : Form
     {
-
+        private int sumaTotal=0;
         public frmDulceria()
         {
             InitializeComponent();
@@ -61,7 +61,13 @@ namespace CinemexApp
         {
             try
             {
-                dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text));
+            dgvDulces.Rows.Add(cmbTipoDeDulce.SelectedItem.ToString(), 
+                cmbDulce.SelectedItem.ToString(), txtMarca.Text,
+                dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text)));
+            sumaTotal = sumaTotal + Convert.ToInt32(dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text)));
+            btnCompraFinal.Enabled = true;
+            btnLimpiarDgv.Enabled = true;
+                //dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text));
                 cmbTipoDeDulce.Items.Clear();
                 //dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
                 cmbDulce.Items.Clear();
@@ -98,6 +104,28 @@ namespace CinemexApp
         {
             cmbTipoDeDulce.Items.Clear();
             dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLimpiarDgv_Click(object sender, EventArgs e)
+        {
+            dgvDulces.Rows.Clear();
+            sumaTotal = 0;
+            btnCompraFinal.Enabled = false;
+            btnLimpiarDgv.Enabled = false;
+        }
+
+        private void btnCompraFinal_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Compra realizada por $"+sumaTotal+" pesos");
+            dgvDulces.Rows.Clear();
+            sumaTotal = 0;
+            btnCompraFinal.Enabled = false;
+            btnLimpiarDgv.Enabled = false;
         }
     }
 }

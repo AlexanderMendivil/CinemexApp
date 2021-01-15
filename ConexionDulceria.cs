@@ -22,7 +22,8 @@ namespace CinemexApp
             try
             {
                 //conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
-                conexion = new SqlConnection("Data Source=DESKTOP-EAET5MJ;Initial Catalog=CINEMEX;Integrated Security=True");
+                //conexion = new SqlConnection("Data Source=DESKTOP-EAET5MJ;Initial Catalog=CINEMEX;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
                 conexion.Open();
             }
             catch (Exception ex)
@@ -125,22 +126,25 @@ namespace CinemexApp
             }
         }
 
-        public void Comprar(string nombreDulce , int cant)
+        public string Comprar(string nombreDulce , int cant)
         {
             try
             {
                 cmd = new SqlCommand("select precio from DULCE where nombreDulce = '" + nombreDulce + "'", conexion);
                 dr = cmd.ExecuteReader();
+                int precioFinal=0;
                 if (dr.Read())
                 {
-                    int precioFinal = cant * Convert.ToInt32(dr["precio"].ToString());
-                    MessageBox.Show("Se compraron " + cant + " " + nombreDulce + " por $" + precioFinal + " pesos");
+                    precioFinal = cant * Convert.ToInt32(dr["precio"].ToString());
+                    //MessageBox.Show("Se compraron " + cant + " " + nombreDulce + " por $" + precioFinal + " pesos");
                 }
                 dr.Close();
+                return precioFinal.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("No se pudo realizar la compra " + ex.ToString());
+                //MessageBox.Show("No se pudo realizar la compra " + ex.ToString());
+                return "";
             }
         }
 
