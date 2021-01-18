@@ -28,7 +28,7 @@ namespace CinemexApp
         #region textbox
         private void txtPelicula_TextChanged(object sender, EventArgs e)
         {
-            txtPelicula.Enabled = true;
+            txtAnioPel.Enabled = true;
             btnLimpiar.Enabled = true;
         }
         private void txtAnioPel_TextChanged(object sender, EventArgs e)
@@ -46,6 +46,26 @@ namespace CinemexApp
 
         private void txtDuracion_TextChanged(object sender, EventArgs e)
         {
+            txtSala.Enabled = true;
+        }
+
+        private void txtSala_TextChanged(object sender, EventArgs e)
+        {
+            txtIdioma.Enabled = true;
+        }
+
+        private void txtIdioma_TextChanged(object sender, EventArgs e)
+        {
+            txtHora.Enabled = true;
+        }
+
+        private void txtHora_TextChanged(object sender, EventArgs e)
+        {
+            txtPrecio.Enabled = true;
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
             btnAgregar.Enabled = true;
         }
         #endregion
@@ -55,18 +75,9 @@ namespace CinemexApp
         {
             try
             {
-                taquilla.Agregar(rand.Next(), txtPelicula.Text, txtAnioPel.Text, txtGenero.Text,txtDirector.Text, txtDuracion.Text);
-                txtPelicula.Clear();
-                txtAnioPel.Clear();
-                txtGenero.Clear();
-                txtDirector.Clear();
-                txtDuracion.Clear();
-                txtPelicula.Enabled = false;
-                txtAnioPel.Enabled = false;
-                txtGenero.Enabled = false;
-                txtDirector.Enabled = false;
-                txtDuracion.Enabled = false;
-                btnLimpiar.Enabled = false;
+                taquilla.Agregar(rand.Next(), txtPelicula.Text, txtGenero.Text, txtAnioPel.Text, txtDirector.Text, txtDuracion.Text,
+                    rand.Next(), txtSala.Text, txtIdioma.Text, txtHora.Text, Convert.ToInt32(txtPrecio.Text));
+                LimpiarTodo();
             }
             catch (Exception)
             {
@@ -75,19 +86,32 @@ namespace CinemexApp
         }
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            LimpiarTodo();
+        }
+        #endregion
+
+        private void LimpiarTodo()
+        {
             txtPelicula.Clear();
             txtAnioPel.Clear();
             txtGenero.Clear();
             txtDirector.Clear();
             txtDuracion.Clear();
+            txtSala.Clear();
+            txtIdioma.Clear();
+            txtHora.Clear();
+            txtPrecio.Clear();
             txtPelicula.Enabled = false;
             txtAnioPel.Enabled = false;
             txtGenero.Enabled = false;
             txtDirector.Enabled = false;
             txtDuracion.Enabled = false;
+            txtSala.Enabled = false;
+            txtIdioma.Enabled = false;
+            txtHora.Enabled = false;
+            txtPrecio.Enabled = false;
             btnLimpiar.Enabled = false;
         }
-        #endregion
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
