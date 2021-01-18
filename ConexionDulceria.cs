@@ -21,9 +21,9 @@ namespace CinemexApp
         {
             try
             {
-                //conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
                 //conexion = new SqlConnection("Data Source=DESKTOP-EAET5MJ;Initial Catalog=CINEMEX;Integrated Security=True");
-                conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
+                //conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
                 conexion.Open();
             }
             catch (Exception ex)
@@ -146,6 +146,21 @@ namespace CinemexApp
                 //MessageBox.Show("No se pudo realizar la compra " + ex.ToString());
                 return "";
             }
+        }
+
+        public void LlenarCompra(string nombreDulce){
+
+            try
+            {
+                cmd = new SqlCommand("SELECT idDulce from DULCE where nombreDulce='"+nombreDulce+"'", conexion);
+               int idDulce = Convert.ToInt32(cmd.ExecuteScalar());
+                dr = cmd.ExecuteReader();
+                dr.Close();
+            cmd = new SqlCommand("INSERT INTO VENTADULCE VALUES("+DatosEmpleado.idEmpleado+","+idDulce+")",conexion);
+                dr = cmd.ExecuteReader();
+                dr.Close();
+            }
+            catch (Exception){ MessageBox.Show("NO SE AGREGO A VENTADULCE"); }
         }
 
         public void Modificar(string DulceSelect, string tipoDulce, string nombreDulce, string marca, int precio)

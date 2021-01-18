@@ -1,4 +1,11 @@
-﻿using System;
+﻿using iText.IO.Font.Constants;
+using iText.Kernel.Font;
+using iText.Kernel.Geom;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -20,9 +27,9 @@ namespace CinemexApp
         {
             try
             {
-                //conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
                 //conexion = new SqlConnection("Data Source=DESKTOP-EAET5MJ;Initial Catalog=CINEMEX;Integrated Security=True");
-                conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
+                //conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
                 conexion.Open();
             }
             catch (Exception ex)
@@ -126,6 +133,21 @@ namespace CinemexApp
                 return "";
             }
         }
+
+        public void LlenarCompra(string nombrePel)
+        {
+            try
+            {
+                cmd = new SqlCommand("SELECT idFuncion from FUNCION where idPelicula in(select idPelicula from PELICULA where nombrePelicula='"+nombrePel+"')", conexion);
+                int idFuncion = Convert.ToInt32(cmd.ExecuteScalar());
+                dr = cmd.ExecuteReader();
+                dr.Close();
+                cmd = new SqlCommand("INSERT INTO VENTAFUNCION VALUES(" + DatosEmpleado.idEmpleado + "," + idFuncion + ")", conexion);
+                dr = cmd.ExecuteReader();
+                dr.Close();
+            }
+            catch (Exception) { MessageBox.Show("NO SE AGREGO A VENTAFUNCION"); }
+        }
         public void Modificar(string PeliculaSelect, string nombrePel, string Anio, string genero, string director, string duracion)
         {
             try
@@ -191,6 +213,40 @@ namespace CinemexApp
         public void IdiomaSeleccionado(string idiomaselect)
         {
             idiomaElegido = idiomaselect;
+        }
+
+        public void CrearPDF()
+        {
+            PdfWriter pdfWriter = new PdfWriter("REPORTE.PDF");
+            PdfDocument pdf = new PdfDocument(pdfWriter);
+            Document documento = new Document(pdf, PageSize.LETTER);
+
+            documento.SetMargins(60, 20, 55, 20);
+            PdfFont fontColumnas = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD);
+            PdfFont fontContenido = PdfFontFactory.CreateFont(StandardFonts.HELVETICA);
+
+            string[] columnas = { "EMPLEADO", "SALA", "HORA", "PRECIO", "PELICULA" };
+            float[] tamanios = { 2,4,2,2,4};
+            Table tabla = new Table(UnitValue.CreatePercentArray(tamanios));
+            tabla.SetWidth(UnitValue.CreatePercentValue(100));
+
+            foreach (string columna in columnas)
+            {
+                tabla.AddHeaderCell(new Cell().Add(new Paragraph(columna).SetFont(fontColumnas)));
+            }
+
+            cmd = new SqlCommand("select nombreEmpleado, sala, hora, precio, nombrePelicula from EMPLEADO, VENTAFUNCION, FUNCION, PELICULA where EMPLEADO.idEmpleado = VENTAFUNCION.idEmpleado and VENTAFUNCION.idFuncion = FUNCION.idFuncion and FUNCION.idPelicula = PELICULA.idPelicula", conexion);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                tabla.AddCell(new Cell().Add(new Paragraph(dr["nombreEmpleado"].ToString()).SetFont(fontContenido)));
+                tabla.AddCell(new Cell().Add(new Paragraph(dr["sala"].ToString()).SetFont(fontContenido)));
+                tabla.AddCell(new Cell().Add(new Paragraph(dr["hora"].ToString()).SetFont(fontContenido)));
+                tabla.AddCell(new Cell().Add(new Paragraph(dr["precio"].ToString()).SetFont(fontContenido)));
+                tabla.AddCell(new Cell().Add(new Paragraph(dr["nombrePelicula"].ToString()).SetFont(fontContenido)));
+            }
+            documento.Add(tabla);
+            documento.Close();
         }
     }
 }

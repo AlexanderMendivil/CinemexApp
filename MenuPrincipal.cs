@@ -14,6 +14,8 @@ namespace CinemexApp
     public partial class MenuPrincipal : Form
     {
 
+        ConexionTaquilla taquilla = new ConexionTaquilla();
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -377,8 +379,13 @@ namespace CinemexApp
             taquillaModificar.Enabled = true;
             taquillaModificar.Show();
         }
+
+
         #endregion
 
-
+        private void btnReporteTaquilla_Click(object sender, EventArgs e)
+        {
+            taquilla.CrearPDF();
+        }
     }
 }

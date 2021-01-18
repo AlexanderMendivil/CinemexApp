@@ -84,6 +84,7 @@ namespace CinemexApp
                 cmbFuncion.SelectedItem.ToString(), txtCantidad.Text,
                 taquilla.Comprar(cmbPelícula.SelectedItem.ToString(),
                 Convert.ToInt32(txtCantidad.Text)));
+                taquilla.LlenarCompra(cmbPelícula.SelectedItem.ToString());
                 sumaTotal = sumaTotal + Convert.ToInt32(taquilla.Comprar(cmbPelícula.SelectedItem.ToString(),
                     Convert.ToInt32(txtCantidad.Text)));
                 btnCompraFinal.Enabled = true;

@@ -33,6 +33,8 @@
             this.lblCerra = new System.Windows.Forms.Label();
             this.lblMinimo = new System.Windows.Forms.Label();
             this.pnlChildForms = new System.Windows.Forms.Panel();
+            this.btnReporteDulceria = new System.Windows.Forms.Button();
+            this.btnReporteTaquilla = new System.Windows.Forms.Button();
             this.pnlBotonesCartelera = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -104,6 +106,8 @@
             // 
             // pnlChildForms
             // 
+            this.pnlChildForms.Controls.Add(this.btnReporteDulceria);
+            this.pnlChildForms.Controls.Add(this.btnReporteTaquilla);
             this.pnlChildForms.Controls.Add(this.pnlBotonesCartelera);
             this.pnlChildForms.Controls.Add(this.pnlBotonesDulceria);
             this.pnlChildForms.Controls.Add(this.pbTaquilla);
@@ -113,6 +117,25 @@
             this.pnlChildForms.Name = "pnlChildForms";
             this.pnlChildForms.Size = new System.Drawing.Size(1017, 452);
             this.pnlChildForms.TabIndex = 20;
+            // 
+            // btnReporteDulceria
+            // 
+            this.btnReporteDulceria.Location = new System.Drawing.Point(695, 84);
+            this.btnReporteDulceria.Name = "btnReporteDulceria";
+            this.btnReporteDulceria.Size = new System.Drawing.Size(76, 41);
+            this.btnReporteDulceria.TabIndex = 19;
+            this.btnReporteDulceria.Text = "REPORTE VENTAS";
+            this.btnReporteDulceria.UseVisualStyleBackColor = true;
+            // 
+            // btnReporteTaquilla
+            // 
+            this.btnReporteTaquilla.Location = new System.Drawing.Point(246, 84);
+            this.btnReporteTaquilla.Name = "btnReporteTaquilla";
+            this.btnReporteTaquilla.Size = new System.Drawing.Size(76, 41);
+            this.btnReporteTaquilla.TabIndex = 18;
+            this.btnReporteTaquilla.Text = "REPORTE VENTAS";
+            this.btnReporteTaquilla.UseVisualStyleBackColor = true;
+            this.btnReporteTaquilla.Click += new System.EventHandler(this.btnReporteTaquilla_Click);
             // 
             // pnlBotonesCartelera
             // 
@@ -345,6 +368,8 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnReporteDulceria;
+        private System.Windows.Forms.Button btnReporteTaquilla;
     }
 }
 

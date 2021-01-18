@@ -64,6 +64,7 @@ namespace CinemexApp
             dgvDulces.Rows.Add(cmbTipoDeDulce.SelectedItem.ToString(), 
                 cmbDulce.SelectedItem.ToString(), txtMarca.Text,
                 dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text)));
+                dulceria.LlenarCompra(cmbDulce.SelectedItem.ToString());
             sumaTotal = sumaTotal + Convert.ToInt32(dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text)));
             btnCompraFinal.Enabled = true;
             btnLimpiarDgv.Enabled = true;

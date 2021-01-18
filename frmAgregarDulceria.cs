@@ -14,7 +14,6 @@ namespace CinemexApp
     {
         ConexionDulceria dulceria = new ConexionDulceria();
         Random rand = new Random();
-
         public frmAgregarDulceria()
         {
             InitializeComponent();
