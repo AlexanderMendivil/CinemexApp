@@ -36,6 +36,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.pbxLogoCinemex = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogoCinemex)).BeginInit();
             this.SuspendLayout();
@@ -43,10 +44,11 @@
             // lblEmpleado
             // 
             this.lblEmpleado.AutoSize = true;
-            this.lblEmpleado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleado.ForeColor = System.Drawing.Color.White;
             this.lblEmpleado.Location = new System.Drawing.Point(372, 21);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(84, 15);
+            this.lblEmpleado.Size = new System.Drawing.Size(76, 17);
             this.lblEmpleado.TabIndex = 24;
             this.lblEmpleado.Text = "Empleado...";
             // 
@@ -57,7 +59,8 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cmbPelicula);
             this.groupBox1.Controls.Add(this.btnEliminar);
-            this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(23, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(333, 125);
@@ -69,9 +72,10 @@
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnLimpiar.Enabled = false;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Location = new System.Drawing.Point(227, 80);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 39);
             this.btnLimpiar.TabIndex = 36;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -82,7 +86,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(31, 43);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 15);
+            this.label4.Size = new System.Drawing.Size(54, 17);
             this.label4.TabIndex = 26;
             this.label4.Text = "Pelicula:";
             // 
@@ -91,7 +95,7 @@
             this.cmbPelicula.FormattingEnabled = true;
             this.cmbPelicula.Location = new System.Drawing.Point(104, 35);
             this.cmbPelicula.Name = "cmbPelicula";
-            this.cmbPelicula.Size = new System.Drawing.Size(198, 23);
+            this.cmbPelicula.Size = new System.Drawing.Size(198, 25);
             this.cmbPelicula.TabIndex = 19;
             this.cmbPelicula.SelectedValueChanged += new System.EventHandler(this.cmbPelicula_SelectedValueChanged);
             this.cmbPelicula.Click += new System.EventHandler(this.cmbPelicula_Click);
@@ -100,9 +104,10 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnEliminar.Enabled = false;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Location = new System.Drawing.Point(141, 80);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(80, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(80, 39);
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -129,12 +134,21 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(375, 41);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 1);
+            this.panel1.TabIndex = 37;
+            // 
             // frmEliminarTaquilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(738, 211);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.pbxLogoCinemex);
@@ -162,5 +176,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

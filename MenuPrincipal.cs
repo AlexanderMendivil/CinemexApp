@@ -15,6 +15,7 @@ namespace CinemexApp
     {
 
         ConexionTaquilla taquilla = new ConexionTaquilla();
+        ConexionDulceria dulceria = new ConexionDulceria();
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -386,6 +387,11 @@ namespace CinemexApp
         private void btnReporteTaquilla_Click(object sender, EventArgs e)
         {
             taquilla.CrearPDF();
+        }
+
+        private void btnReporteDulceria_Click(object sender, EventArgs e)
+        {
+            dulceria.CrearPDF();
         }
     }
 }

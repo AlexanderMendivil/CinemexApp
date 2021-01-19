@@ -69,7 +69,7 @@ namespace CinemexApp
             txtUser.Visible = true;
             txtPassword.Visible = true;
             btnIngresarPlataforma.Visible = true;
-            pnlChildForms.BackColor = Color.FromArgb(220, 81, 81);
+            pnlChildForms.BackColor = Color.Gainsboro;
         }
 
 

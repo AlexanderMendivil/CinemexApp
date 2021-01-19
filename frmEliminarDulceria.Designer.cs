@@ -66,6 +66,7 @@
             this.lblTipoDulceSelect = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.gbxPrincipal.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogoCinemex)).BeginInit();
@@ -324,10 +325,11 @@
             // lblEmpleado
             // 
             this.lblEmpleado.AutoSize = true;
-            this.lblEmpleado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleado.ForeColor = System.Drawing.Color.White;
             this.lblEmpleado.Location = new System.Drawing.Point(376, 35);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(84, 15);
+            this.lblEmpleado.Size = new System.Drawing.Size(76, 17);
             this.lblEmpleado.TabIndex = 18;
             this.lblEmpleado.Text = "Empleado...";
             // 
@@ -344,7 +346,8 @@
             this.groupBox1.Controls.Add(this.lblDulceSelect);
             this.groupBox1.Controls.Add(this.lblTipoDulceSelect);
             this.groupBox1.Controls.Add(this.lblMarca);
-            this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 35);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(333, 311);
@@ -356,9 +359,10 @@
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnLimpiar.Enabled = false;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Location = new System.Drawing.Point(243, 266);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 38);
             this.btnLimpiar.TabIndex = 4;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -370,7 +374,7 @@
             this.cmbTipoDulce.FormattingEnabled = true;
             this.cmbTipoDulce.Location = new System.Drawing.Point(119, 40);
             this.cmbTipoDulce.Name = "cmbTipoDulce";
-            this.cmbTipoDulce.Size = new System.Drawing.Size(200, 23);
+            this.cmbTipoDulce.Size = new System.Drawing.Size(200, 25);
             this.cmbTipoDulce.TabIndex = 1;
             this.cmbTipoDulce.SelectedValueChanged += new System.EventHandler(this.cmbTipoDulce_SelectedValueChanged);
             this.cmbTipoDulce.Click += new System.EventHandler(this.cmbTipoDulce_Click);
@@ -382,7 +386,7 @@
             this.cmbDulce.FormattingEnabled = true;
             this.cmbDulce.Location = new System.Drawing.Point(119, 93);
             this.cmbDulce.Name = "cmbDulce";
-            this.cmbDulce.Size = new System.Drawing.Size(200, 23);
+            this.cmbDulce.Size = new System.Drawing.Size(200, 25);
             this.cmbDulce.TabIndex = 2;
             this.cmbDulce.SelectedValueChanged += new System.EventHandler(this.cmbDulce_SelectedValueChanged);
             // 
@@ -391,7 +395,7 @@
             this.txtPrecio.Enabled = false;
             this.txtPrecio.Location = new System.Drawing.Point(119, 207);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(200, 23);
+            this.txtPrecio.Size = new System.Drawing.Size(200, 25);
             this.txtPrecio.TabIndex = 33;
             // 
             // lblPrecio
@@ -399,7 +403,7 @@
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Location = new System.Drawing.Point(11, 210);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(50, 15);
+            this.lblPrecio.Size = new System.Drawing.Size(44, 17);
             this.lblPrecio.TabIndex = 32;
             this.lblPrecio.Text = "Precio";
             // 
@@ -408,16 +412,17 @@
             this.txtMarca.Enabled = false;
             this.txtMarca.Location = new System.Drawing.Point(119, 149);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(200, 23);
+            this.txtMarca.Size = new System.Drawing.Size(200, 25);
             this.txtMarca.TabIndex = 30;
             // 
             // btnBorrar
             // 
             this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnBorrar.Enabled = false;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Location = new System.Drawing.Point(145, 266);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(92, 23);
+            this.btnBorrar.Size = new System.Drawing.Size(92, 38);
             this.btnBorrar.TabIndex = 3;
             this.btnBorrar.Text = "Eliminar";
             this.btnBorrar.UseVisualStyleBackColor = false;
@@ -428,7 +433,7 @@
             this.lblDulceSelect.AutoSize = true;
             this.lblDulceSelect.Location = new System.Drawing.Point(11, 96);
             this.lblDulceSelect.Name = "lblDulceSelect";
-            this.lblDulceSelect.Size = new System.Drawing.Size(45, 15);
+            this.lblDulceSelect.Size = new System.Drawing.Size(40, 17);
             this.lblDulceSelect.TabIndex = 27;
             this.lblDulceSelect.Text = "Dulce";
             // 
@@ -437,7 +442,7 @@
             this.lblTipoDulceSelect.AutoSize = true;
             this.lblTipoDulceSelect.Location = new System.Drawing.Point(11, 43);
             this.lblTipoDulceSelect.Name = "lblTipoDulceSelect";
-            this.lblTipoDulceSelect.Size = new System.Drawing.Size(95, 15);
+            this.lblTipoDulceSelect.Size = new System.Drawing.Size(89, 17);
             this.lblTipoDulceSelect.TabIndex = 25;
             this.lblTipoDulceSelect.Text = "Tipo de Dulce";
             // 
@@ -446,7 +451,7 @@
             this.lblMarca.AutoSize = true;
             this.lblMarca.Location = new System.Drawing.Point(11, 152);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(48, 15);
+            this.lblMarca.Size = new System.Drawing.Size(45, 17);
             this.lblMarca.TabIndex = 26;
             this.lblMarca.Text = "Marca";
             // 
@@ -461,12 +466,21 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(379, 55);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 1);
+            this.panel1.TabIndex = 34;
+            // 
             // frmEliminarDulceria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(738, 351);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.pbxLogoCinemex);
@@ -529,5 +543,6 @@
         private System.Windows.Forms.Label lblTipoDulceSelect;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

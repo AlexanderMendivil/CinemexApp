@@ -49,6 +49,7 @@
             this.ColumnPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLimpiarDgv = new System.Windows.Forms.Button();
             this.btnCompraFinal = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.gbxPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogoCinemex)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDulces)).BeginInit();
@@ -57,10 +58,11 @@
             // lblEmpleado
             // 
             this.lblEmpleado.AutoSize = true;
-            this.lblEmpleado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleado.ForeColor = System.Drawing.Color.White;
             this.lblEmpleado.Location = new System.Drawing.Point(376, 35);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(84, 15);
+            this.lblEmpleado.Size = new System.Drawing.Size(76, 17);
             this.lblEmpleado.TabIndex = 13;
             this.lblEmpleado.Text = "Empleado...";
             // 
@@ -77,7 +79,8 @@
             this.gbxPrincipal.Controls.Add(this.lblPelicula);
             this.gbxPrincipal.Controls.Add(this.cmbTipoDeDulce);
             this.gbxPrincipal.Controls.Add(this.lblFuncion);
-            this.gbxPrincipal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxPrincipal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxPrincipal.ForeColor = System.Drawing.Color.White;
             this.gbxPrincipal.Location = new System.Drawing.Point(12, 35);
             this.gbxPrincipal.Name = "gbxPrincipal";
             this.gbxPrincipal.Size = new System.Drawing.Size(333, 284);
@@ -91,7 +94,7 @@
             this.txtMarca.Location = new System.Drawing.Point(110, 131);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.ReadOnly = true;
-            this.txtMarca.Size = new System.Drawing.Size(202, 23);
+            this.txtMarca.Size = new System.Drawing.Size(202, 25);
             this.txtMarca.TabIndex = 15;
             // 
             // txtCantidad
@@ -99,7 +102,7 @@
             this.txtCantidad.Enabled = false;
             this.txtCantidad.Location = new System.Drawing.Point(152, 185);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 23);
+            this.txtCantidad.Size = new System.Drawing.Size(100, 25);
             this.txtCantidad.TabIndex = 3;
             this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
@@ -108,7 +111,7 @@
             this.lblCantidadBoletos.AutoSize = true;
             this.lblCantidadBoletos.Location = new System.Drawing.Point(38, 188);
             this.lblCantidadBoletos.Name = "lblCantidadBoletos";
-            this.lblCantidadBoletos.Size = new System.Drawing.Size(66, 15);
+            this.lblCantidadBoletos.Size = new System.Drawing.Size(60, 17);
             this.lblCantidadBoletos.TabIndex = 13;
             this.lblCantidadBoletos.Text = "Cantidad";
             // 
@@ -116,9 +119,11 @@
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnLimpiar.Enabled = false;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Location = new System.Drawing.Point(237, 240);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 38);
             this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -128,9 +133,10 @@
             // 
             this.btnComprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnComprar.Enabled = false;
+            this.btnComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComprar.Location = new System.Drawing.Point(152, 240);
             this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(75, 23);
+            this.btnComprar.Size = new System.Drawing.Size(75, 38);
             this.btnComprar.TabIndex = 4;
             this.btnComprar.Text = "Agregar";
             this.btnComprar.UseVisualStyleBackColor = false;
@@ -143,7 +149,7 @@
             this.cmbDulce.FormattingEnabled = true;
             this.cmbDulce.Location = new System.Drawing.Point(110, 88);
             this.cmbDulce.Name = "cmbDulce";
-            this.cmbDulce.Size = new System.Drawing.Size(202, 23);
+            this.cmbDulce.Size = new System.Drawing.Size(202, 25);
             this.cmbDulce.TabIndex = 2;
             this.cmbDulce.SelectedValueChanged += new System.EventHandler(this.cmbDulce_SelectedValueChanged);
             // 
@@ -152,7 +158,7 @@
             this.lblIdioma.AutoSize = true;
             this.lblIdioma.Location = new System.Drawing.Point(55, 91);
             this.lblIdioma.Name = "lblIdioma";
-            this.lblIdioma.Size = new System.Drawing.Size(49, 15);
+            this.lblIdioma.Size = new System.Drawing.Size(43, 17);
             this.lblIdioma.TabIndex = 9;
             this.lblIdioma.Text = "Dulce:";
             // 
@@ -161,7 +167,7 @@
             this.lblPelicula.AutoSize = true;
             this.lblPelicula.Location = new System.Drawing.Point(9, 40);
             this.lblPelicula.Name = "lblPelicula";
-            this.lblPelicula.Size = new System.Drawing.Size(97, 15);
+            this.lblPelicula.Size = new System.Drawing.Size(91, 17);
             this.lblPelicula.TabIndex = 5;
             this.lblPelicula.Text = "Tipo de dulce:";
             // 
@@ -171,7 +177,7 @@
             this.cmbTipoDeDulce.FormattingEnabled = true;
             this.cmbTipoDeDulce.Location = new System.Drawing.Point(110, 37);
             this.cmbTipoDeDulce.Name = "cmbTipoDeDulce";
-            this.cmbTipoDeDulce.Size = new System.Drawing.Size(202, 23);
+            this.cmbTipoDeDulce.Size = new System.Drawing.Size(202, 25);
             this.cmbTipoDeDulce.TabIndex = 1;
             this.cmbTipoDeDulce.SelectedIndexChanged += new System.EventHandler(this.cmbTipoDeDulce_SelectedIndexChanged);
             this.cmbTipoDeDulce.SelectedValueChanged += new System.EventHandler(this.cmbTipoDeDulce_SelectedValueChanged);
@@ -182,7 +188,7 @@
             this.lblFuncion.AutoSize = true;
             this.lblFuncion.Location = new System.Drawing.Point(52, 134);
             this.lblFuncion.Name = "lblFuncion";
-            this.lblFuncion.Size = new System.Drawing.Size(52, 15);
+            this.lblFuncion.Size = new System.Drawing.Size(48, 17);
             this.lblFuncion.TabIndex = 7;
             this.lblFuncion.Text = "Marca:";
             // 
@@ -248,10 +254,12 @@
             // 
             this.btnLimpiarDgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnLimpiarDgv.Enabled = false;
-            this.btnLimpiarDgv.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarDgv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarDgv.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarDgv.ForeColor = System.Drawing.Color.DimGray;
             this.btnLimpiarDgv.Location = new System.Drawing.Point(723, 325);
             this.btnLimpiarDgv.Name = "btnLimpiarDgv";
-            this.btnLimpiarDgv.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiarDgv.Size = new System.Drawing.Size(74, 32);
             this.btnLimpiarDgv.TabIndex = 16;
             this.btnLimpiarDgv.Text = "Limpiar";
             this.btnLimpiarDgv.UseVisualStyleBackColor = false;
@@ -261,14 +269,24 @@
             // 
             this.btnCompraFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnCompraFinal.Enabled = false;
-            this.btnCompraFinal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompraFinal.Location = new System.Drawing.Point(642, 325);
+            this.btnCompraFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompraFinal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompraFinal.ForeColor = System.Drawing.Color.White;
+            this.btnCompraFinal.Location = new System.Drawing.Point(643, 325);
             this.btnCompraFinal.Name = "btnCompraFinal";
-            this.btnCompraFinal.Size = new System.Drawing.Size(75, 23);
+            this.btnCompraFinal.Size = new System.Drawing.Size(74, 32);
             this.btnCompraFinal.TabIndex = 17;
             this.btnCompraFinal.Text = "Comprar";
             this.btnCompraFinal.UseVisualStyleBackColor = false;
             this.btnCompraFinal.Click += new System.EventHandler(this.btnCompraFinal_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(379, 55);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 1);
+            this.panel1.TabIndex = 22;
             // 
             // frmDulceria
             // 
@@ -276,6 +294,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(810, 359);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCompraFinal);
             this.Controls.Add(this.btnLimpiarDgv);
             this.Controls.Add(this.dgvDulces);
@@ -319,5 +338,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrecio;
         private System.Windows.Forms.Button btnLimpiarDgv;
         private System.Windows.Forms.Button btnCompraFinal;
+        private System.Windows.Forms.Panel panel1;
     }
 }

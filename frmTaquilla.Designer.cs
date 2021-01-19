@@ -51,6 +51,7 @@
             this.ColumnPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLimpiarDgv = new System.Windows.Forms.Button();
             this.btnCompraFinal = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogoCinemex)).BeginInit();
             this.gbxPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaquilla)).BeginInit();
@@ -69,11 +70,11 @@
             // lblEmpleado
             // 
             this.lblEmpleado.AutoSize = true;
-            this.lblEmpleado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpleado.ForeColor = System.Drawing.Color.Black;
+            this.lblEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleado.ForeColor = System.Drawing.Color.White;
             this.lblEmpleado.Location = new System.Drawing.Point(376, 35);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(84, 15);
+            this.lblEmpleado.Size = new System.Drawing.Size(76, 17);
             this.lblEmpleado.TabIndex = 2;
             this.lblEmpleado.Text = "Empleado...";
             // 
@@ -90,7 +91,8 @@
             this.gbxPrincipal.Controls.Add(this.lblPelicula);
             this.gbxPrincipal.Controls.Add(this.cmbPelícula);
             this.gbxPrincipal.Controls.Add(this.lblFuncion);
-            this.gbxPrincipal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxPrincipal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxPrincipal.ForeColor = System.Drawing.Color.White;
             this.gbxPrincipal.Location = new System.Drawing.Point(12, 35);
             this.gbxPrincipal.Name = "gbxPrincipal";
             this.gbxPrincipal.Size = new System.Drawing.Size(333, 284);
@@ -103,17 +105,17 @@
             this.txtCantidad.Enabled = false;
             this.txtCantidad.Location = new System.Drawing.Point(188, 185);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 23);
+            this.txtCantidad.Size = new System.Drawing.Size(100, 25);
             this.txtCantidad.TabIndex = 14;
             this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // lblCantidadBoletos
             // 
             this.lblCantidadBoletos.AutoSize = true;
-            this.lblCantidadBoletos.ForeColor = System.Drawing.Color.Black;
+            this.lblCantidadBoletos.ForeColor = System.Drawing.Color.White;
             this.lblCantidadBoletos.Location = new System.Drawing.Point(20, 188);
             this.lblCantidadBoletos.Name = "lblCantidadBoletos";
-            this.lblCantidadBoletos.Size = new System.Drawing.Size(136, 15);
+            this.lblCantidadBoletos.Size = new System.Drawing.Size(127, 17);
             this.lblCantidadBoletos.TabIndex = 13;
             this.lblCantidadBoletos.Text = "Cantidad de boletos";
             // 
@@ -121,10 +123,11 @@
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnLimpiar.Enabled = false;
-            this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Location = new System.Drawing.Point(237, 240);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 38);
             this.btnLimpiar.TabIndex = 12;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -134,10 +137,11 @@
             // 
             this.btnComprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnComprar.Enabled = false;
-            this.btnComprar.ForeColor = System.Drawing.Color.Black;
+            this.btnComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComprar.ForeColor = System.Drawing.Color.White;
             this.btnComprar.Location = new System.Drawing.Point(152, 240);
             this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(75, 23);
+            this.btnComprar.Size = new System.Drawing.Size(75, 38);
             this.btnComprar.TabIndex = 11;
             this.btnComprar.Text = "Agregar";
             this.btnComprar.UseVisualStyleBackColor = false;
@@ -150,17 +154,17 @@
             this.cmbIdioma.FormattingEnabled = true;
             this.cmbIdioma.Location = new System.Drawing.Point(94, 85);
             this.cmbIdioma.Name = "cmbIdioma";
-            this.cmbIdioma.Size = new System.Drawing.Size(218, 23);
+            this.cmbIdioma.Size = new System.Drawing.Size(218, 25);
             this.cmbIdioma.TabIndex = 10;
             this.cmbIdioma.SelectedValueChanged += new System.EventHandler(this.cmbIdioma_SelectedValueChanged);
             // 
             // lblIdioma
             // 
             this.lblIdioma.AutoSize = true;
-            this.lblIdioma.ForeColor = System.Drawing.Color.Black;
+            this.lblIdioma.ForeColor = System.Drawing.Color.White;
             this.lblIdioma.Location = new System.Drawing.Point(20, 88);
             this.lblIdioma.Name = "lblIdioma";
-            this.lblIdioma.Size = new System.Drawing.Size(51, 15);
+            this.lblIdioma.Size = new System.Drawing.Size(48, 17);
             this.lblIdioma.TabIndex = 9;
             this.lblIdioma.Text = "Idioma";
             // 
@@ -171,17 +175,17 @@
             this.cmbFuncion.FormattingEnabled = true;
             this.cmbFuncion.Location = new System.Drawing.Point(94, 134);
             this.cmbFuncion.Name = "cmbFuncion";
-            this.cmbFuncion.Size = new System.Drawing.Size(218, 23);
+            this.cmbFuncion.Size = new System.Drawing.Size(218, 25);
             this.cmbFuncion.TabIndex = 8;
             this.cmbFuncion.SelectedValueChanged += new System.EventHandler(this.cmbFuncion_SelectedValueChanged);
             // 
             // lblPelicula
             // 
             this.lblPelicula.AutoSize = true;
-            this.lblPelicula.ForeColor = System.Drawing.Color.Black;
+            this.lblPelicula.ForeColor = System.Drawing.Color.White;
             this.lblPelicula.Location = new System.Drawing.Point(20, 40);
             this.lblPelicula.Name = "lblPelicula";
-            this.lblPelicula.Size = new System.Drawing.Size(60, 15);
+            this.lblPelicula.Size = new System.Drawing.Size(51, 17);
             this.lblPelicula.TabIndex = 5;
             this.lblPelicula.Text = "Película";
             // 
@@ -191,7 +195,7 @@
             this.cmbPelícula.FormattingEnabled = true;
             this.cmbPelícula.Location = new System.Drawing.Point(94, 37);
             this.cmbPelícula.Name = "cmbPelícula";
-            this.cmbPelícula.Size = new System.Drawing.Size(218, 23);
+            this.cmbPelícula.Size = new System.Drawing.Size(218, 25);
             this.cmbPelícula.TabIndex = 6;
             this.cmbPelícula.SelectedValueChanged += new System.EventHandler(this.cmbPelícula_SelectedValueChanged);
             this.cmbPelícula.Click += new System.EventHandler(this.cmbPelícula_Click);
@@ -199,10 +203,10 @@
             // lblFuncion
             // 
             this.lblFuncion.AutoSize = true;
-            this.lblFuncion.ForeColor = System.Drawing.Color.Black;
+            this.lblFuncion.ForeColor = System.Drawing.Color.White;
             this.lblFuncion.Location = new System.Drawing.Point(20, 137);
             this.lblFuncion.Name = "lblFuncion";
-            this.lblFuncion.Size = new System.Drawing.Size(59, 15);
+            this.lblFuncion.Size = new System.Drawing.Size(52, 17);
             this.lblFuncion.TabIndex = 7;
             this.lblFuncion.Text = "Función";
             // 
@@ -266,11 +270,12 @@
             // 
             this.btnLimpiarDgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnLimpiarDgv.Enabled = false;
+            this.btnLimpiarDgv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarDgv.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarDgv.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiarDgv.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarDgv.Location = new System.Drawing.Point(814, 325);
             this.btnLimpiarDgv.Name = "btnLimpiarDgv";
-            this.btnLimpiarDgv.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiarDgv.Size = new System.Drawing.Size(75, 33);
             this.btnLimpiarDgv.TabIndex = 20;
             this.btnLimpiarDgv.Text = "Limpiar";
             this.btnLimpiarDgv.UseVisualStyleBackColor = false;
@@ -280,15 +285,24 @@
             // 
             this.btnCompraFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.btnCompraFinal.Enabled = false;
-            this.btnCompraFinal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompraFinal.ForeColor = System.Drawing.Color.Black;
+            this.btnCompraFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompraFinal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompraFinal.ForeColor = System.Drawing.Color.White;
             this.btnCompraFinal.Location = new System.Drawing.Point(729, 325);
             this.btnCompraFinal.Name = "btnCompraFinal";
-            this.btnCompraFinal.Size = new System.Drawing.Size(75, 23);
+            this.btnCompraFinal.Size = new System.Drawing.Size(75, 33);
             this.btnCompraFinal.TabIndex = 19;
             this.btnCompraFinal.Text = "Comprar";
             this.btnCompraFinal.UseVisualStyleBackColor = false;
             this.btnCompraFinal.Click += new System.EventHandler(this.btnCompraFinal_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(379, 55);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 1);
+            this.panel1.TabIndex = 21;
             // 
             // frmTaquilla
             // 
@@ -296,6 +310,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(901, 360);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLimpiarDgv);
             this.Controls.Add(this.btnCompraFinal);
             this.Controls.Add(this.dgvTaquilla);
@@ -344,5 +359,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrecio;
         private System.Windows.Forms.Button btnLimpiarDgv;
         private System.Windows.Forms.Button btnCompraFinal;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -217,7 +217,7 @@ namespace CinemexApp
 
         public void CrearPDF()
         {
-            PdfWriter pdfWriter = new PdfWriter("REPORTE.PDF");
+            PdfWriter pdfWriter = new PdfWriter("REPORTE_TAQUILLA.PDF");
             PdfDocument pdf = new PdfDocument(pdfWriter);
             Document documento = new Document(pdf, PageSize.LETTER);
 

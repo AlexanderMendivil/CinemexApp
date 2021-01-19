@@ -106,6 +106,7 @@
             // 
             // pnlChildForms
             // 
+            this.pnlChildForms.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlChildForms.Controls.Add(this.btnReporteDulceria);
             this.pnlChildForms.Controls.Add(this.btnReporteTaquilla);
             this.pnlChildForms.Controls.Add(this.pnlBotonesCartelera);
@@ -120,21 +121,30 @@
             // 
             // btnReporteDulceria
             // 
-            this.btnReporteDulceria.Location = new System.Drawing.Point(695, 84);
+            this.btnReporteDulceria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.btnReporteDulceria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteDulceria.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteDulceria.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnReporteDulceria.Location = new System.Drawing.Point(680, 84);
             this.btnReporteDulceria.Name = "btnReporteDulceria";
-            this.btnReporteDulceria.Size = new System.Drawing.Size(76, 41);
+            this.btnReporteDulceria.Size = new System.Drawing.Size(121, 41);
             this.btnReporteDulceria.TabIndex = 19;
-            this.btnReporteDulceria.Text = "REPORTE VENTAS";
-            this.btnReporteDulceria.UseVisualStyleBackColor = true;
+            this.btnReporteDulceria.Text = "REPORTE VENTAS DULCERIA";
+            this.btnReporteDulceria.UseVisualStyleBackColor = false;
+            this.btnReporteDulceria.Click += new System.EventHandler(this.btnReporteDulceria_Click);
             // 
             // btnReporteTaquilla
             // 
-            this.btnReporteTaquilla.Location = new System.Drawing.Point(246, 84);
+            this.btnReporteTaquilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.btnReporteTaquilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteTaquilla.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteTaquilla.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnReporteTaquilla.Location = new System.Drawing.Point(219, 84);
             this.btnReporteTaquilla.Name = "btnReporteTaquilla";
-            this.btnReporteTaquilla.Size = new System.Drawing.Size(76, 41);
+            this.btnReporteTaquilla.Size = new System.Drawing.Size(121, 41);
             this.btnReporteTaquilla.TabIndex = 18;
-            this.btnReporteTaquilla.Text = "REPORTE VENTAS";
-            this.btnReporteTaquilla.UseVisualStyleBackColor = true;
+            this.btnReporteTaquilla.Text = "REPORTE VENTAS TAQUILLA";
+            this.btnReporteTaquilla.UseVisualStyleBackColor = false;
             this.btnReporteTaquilla.Click += new System.EventHandler(this.btnReporteTaquilla_Click);
             // 
             // pnlBotonesCartelera
@@ -278,7 +288,7 @@
             // 
             // pbTaquilla
             // 
-            this.pbTaquilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.pbTaquilla.BackColor = System.Drawing.Color.Gainsboro;
             this.pbTaquilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbTaquilla.Image = global::CinemexApp.Properties.Resources.cartelera;
             this.pbTaquilla.Location = new System.Drawing.Point(120, 131);

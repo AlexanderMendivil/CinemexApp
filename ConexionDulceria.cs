@@ -1,4 +1,11 @@
-﻿using System;
+﻿using iText.IO.Font.Constants;
+using iText.Kernel.Font;
+using iText.Kernel.Geom;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -216,6 +223,39 @@ namespace CinemexApp
         public void DulceSeleccionado(string dulces)
         {
             dulce = dulces;
+        }
+
+        public void CrearPDF()
+        {
+            PdfWriter pdfWriter = new PdfWriter("REPORTE_DULCERIA.PDF");
+            PdfDocument pdf = new PdfDocument(pdfWriter);
+            Document documento = new Document(pdf, PageSize.LETTER);
+
+            documento.SetMargins(60, 20, 55, 20);
+            PdfFont fontColumnas = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD);
+            PdfFont fontContenido = PdfFontFactory.CreateFont(StandardFonts.HELVETICA);
+
+            string[] columnas = { "EMPLEADO", "DULCE", "PRECIO", "TIPO" };
+            float[] tamanios = { 2, 2, 2, 3,  };
+            Table tabla = new Table(UnitValue.CreatePercentArray(tamanios));
+            tabla.SetWidth(UnitValue.CreatePercentValue(100));
+
+            foreach (string columna in columnas)
+            {
+                tabla.AddHeaderCell(new Cell().Add(new Paragraph(columna).SetFont(fontColumnas)));
+            }
+
+            cmd = new SqlCommand("select nombreEmpleado, nombreDulce, precio, tipo from EMPLEADO, VENTADULCE, DULCE where EMPLEADO.idEmpleado = VENTADULCE.idEmpleado and VENTADULCE.idDulce = DULCE.idDulce", conexion);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                tabla.AddCell(new Cell().Add(new Paragraph(dr["nombreEmpleado"].ToString()).SetFont(fontContenido)));
+                tabla.AddCell(new Cell().Add(new Paragraph(dr["nombreDulce"].ToString()).SetFont(fontContenido)));
+                tabla.AddCell(new Cell().Add(new Paragraph(dr["precio"].ToString()).SetFont(fontContenido)));
+                tabla.AddCell(new Cell().Add(new Paragraph(dr["tipo"].ToString()).SetFont(fontContenido)));
+            }
+            documento.Add(tabla);
+            documento.Close();
         }
     }
 }
