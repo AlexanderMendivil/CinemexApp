@@ -155,15 +155,16 @@ namespace CinemexApp
             }
         }
 
-        public void LlenarCompra(string nombreDulce){
-
+        public void LlenarCompra(string nombreDulce, int precio, string tipoDulce)
+        {
             try
             {
                 cmd = new SqlCommand("SELECT idDulce from DULCE where nombreDulce='"+nombreDulce+"'", conexion);
-               int idDulce = Convert.ToInt32(cmd.ExecuteScalar());
+                int idDulce = Convert.ToInt32(cmd.ExecuteScalar());
                 dr = cmd.ExecuteReader();
                 dr.Close();
-            cmd = new SqlCommand("INSERT INTO VENTADULCE VALUES("+DatosEmpleado.idEmpleado+","+idDulce+")",conexion);
+
+                cmd = new SqlCommand("INSERT INTO VENTADULCE VALUES("+DatosEmpleado.idEmpleado+","+idDulce+", '" + nombreDulce + "', " + precio + ", '" + tipoDulce + "')",conexion);
                 dr = cmd.ExecuteReader();
                 dr.Close();
             }
@@ -245,7 +246,7 @@ namespace CinemexApp
                 tabla.AddHeaderCell(new Cell().Add(new Paragraph(columna).SetFont(fontColumnas)));
             }
 
-            cmd = new SqlCommand("select nombreEmpleado, nombreDulce, precio, tipo from EMPLEADO, VENTADULCE, DULCE where EMPLEADO.idEmpleado = VENTADULCE.idEmpleado and VENTADULCE.idDulce = DULCE.idDulce", conexion);
+            cmd = new SqlCommand("select nombreEmpleado, nombreDulce, precio, tipo from EMPLEADO, VENTADULCE where EMPLEADO.idEmpleado = VENTADULCE.idEmpleado", conexion);
             dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -254,6 +255,7 @@ namespace CinemexApp
                 tabla.AddCell(new Cell().Add(new Paragraph(dr["precio"].ToString()).SetFont(fontContenido)));
                 tabla.AddCell(new Cell().Add(new Paragraph(dr["tipo"].ToString()).SetFont(fontContenido)));
             }
+            dr.Close();
             documento.Add(tabla);
             documento.Close();
         }

@@ -61,13 +61,17 @@ namespace CinemexApp
         {
             try
             {
-            dgvDulces.Rows.Add(cmbTipoDeDulce.SelectedItem.ToString(), 
+                int precioFinal = Convert.ToInt32(dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text)));
+
+                dgvDulces.Rows.Add(cmbTipoDeDulce.SelectedItem.ToString(), 
                 cmbDulce.SelectedItem.ToString(), txtMarca.Text,
-                dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text)));
-                dulceria.LlenarCompra(cmbDulce.SelectedItem.ToString());
-            sumaTotal = sumaTotal + Convert.ToInt32(dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text)));
-            btnCompraFinal.Enabled = true;
-            btnLimpiarDgv.Enabled = true;
+                precioFinal);
+                
+                dulceria.LlenarCompra(cmbDulce.SelectedItem.ToString(), precioFinal, cmbTipoDeDulce.SelectedItem.ToString());
+
+                sumaTotal = sumaTotal + Convert.ToInt32(dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text)));
+                btnCompraFinal.Enabled = true;
+                btnLimpiarDgv.Enabled = true;
                 //dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text));
                 cmbTipoDeDulce.Items.Clear();
                 //dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
