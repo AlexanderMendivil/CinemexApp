@@ -22,14 +22,15 @@ namespace CinemexApp
         SqlDataReader dr;
         string nombrePeliculas;
         string idiomaElegido;
+        int precioFinal = 0;
 
         public ConexionTaquilla()
         {
             try
             {
-                conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
+                //conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
                 //conexion = new SqlConnection("Data Source=DESKTOP-EAET5MJ;Initial Catalog=CINEMEX;Integrated Security=True");
-                //conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
                 conexion.Open();
             }
             catch (Exception ex)
@@ -118,7 +119,7 @@ namespace CinemexApp
             {
                 cmd = new SqlCommand("select precio from FUNCION where idPelicula in(select idPelicula from PELICULA where nombrePelicula = '"+nombrePel+"')", conexion);
                 dr = cmd.ExecuteReader();
-                int precioFinal = 0;
+
                 if (dr.Read())
                 {
                     precioFinal = cant * Convert.ToInt32(dr["precio"].ToString());
@@ -134,20 +135,47 @@ namespace CinemexApp
             }
         }
 
-        public void LlenarCompra(string nombrePel)
+        public bool LlenarCompra(string nombrePel, string idioma, string funcion, string preciofinal, int cantidad)
         {
+            bool band = true;
             try
             {
-                cmd = new SqlCommand("SELECT idFuncion from FUNCION where idPelicula in(select idPelicula from PELICULA where nombrePelicula='"+nombrePel+"')", conexion);
+                cmd = new SqlCommand("SELECT idFuncion from FUNCION where idioma = '" + idioma + "' and hora = '" + funcion + "' and idPelicula in(select idPelicula from PELICULA where nombrePelicula='" + nombrePel+"')", conexion);
                 int idFuncion = Convert.ToInt32(cmd.ExecuteScalar());
                 dr = cmd.ExecuteReader();
                 dr.Close();
-                cmd = new SqlCommand("INSERT INTO VENTAFUNCION VALUES(" + DatosEmpleado.idEmpleado + "," + idFuncion + ")", conexion);
+
+                cmd = new SqlCommand("select sala from FUNCION where idFuncion = " + idFuncion + "", conexion);
+                int sala = Convert.ToInt32(cmd.ExecuteScalar());
                 dr = cmd.ExecuteReader();
                 dr.Close();
+
+                cmd = new SqlCommand("select asientos from SALAS where sala = '" + sala + "' and hora = '" + funcion + "'", conexion);
+                int asientos = Convert.ToInt32(cmd.ExecuteScalar());
+                dr = cmd.ExecuteReader();
+                dr.Close();
+
+                if (asientos >= cantidad)
+                {
+                    cmd = new SqlCommand("INSERT INTO VENTAFUNCION VALUES(" + DatosEmpleado.idEmpleado + "," + idFuncion + ",'" + sala + "','" + funcion + "'," + Convert.ToInt32(preciofinal) + ",'" + nombrePel + "')", conexion);
+                    dr = cmd.ExecuteReader();
+                    dr.Close();
+
+                    int resta = asientos - cantidad;
+                    cmd = new SqlCommand("update SALAS set asientos = '" + resta + "' where sala = '" + sala + "' and hora = '" + funcion + "'", conexion);
+                    dr = cmd.ExecuteReader();
+                    dr.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Lo sentimos, no quedan suficientes asientos");
+                    band = false;
+                }
             }
             catch (Exception) { MessageBox.Show("NO SE AGREGO A VENTAFUNCION"); }
+            return band;
         }
+
         public void Modificar(string PeliculaSelect, string nombrePel, string Anio, string genero, string director, string duracion)
         {
             try
@@ -167,6 +195,14 @@ namespace CinemexApp
         {
             try
             {
+                /*cmd = new SqlCommand("delete from VENTAFUNCION where idFuncion in(select idFuncion from FUNCION where idPelicula in(select idPelicula from PELICULA where nombrePelicula = '" + PeliculaSelect + "'))", conexion);
+                dr = cmd.ExecuteReader();
+                dr.Close();*/
+
+                cmd = new SqlCommand("delete from SALAS where sala in(select sala from FUNCION where idPelicula in(select idPelicula from PELICULA where nombrePelicula = '" + PeliculaSelect + "')) and hora in(select hora from FUNCION where idPelicula in(select idPelicula from PELICULA where nombrePelicula = '" + PeliculaSelect + "'))", conexion);
+                dr = cmd.ExecuteReader();
+                dr.Close();
+
                 cmd = new SqlCommand("delete from FUNCION where idPelicula in(select idPelicula from PELICULA where nombrePelicula = '" + PeliculaSelect + "')", conexion);
                 dr = cmd.ExecuteReader();
                 dr.Close();
@@ -195,6 +231,10 @@ namespace CinemexApp
                 dr.Close();
 
                 cmd = new SqlCommand("insert into FUNCION values(" + idFuncion + ", '" + sala + "', '" + idioma + "', '" + hora + "', " + precio + ", " + idPelicula + ")", conexion);
+                dr = cmd.ExecuteReader();
+                dr.Close();
+
+                cmd = new SqlCommand("insert into SALAS values('" + sala + "', '" + hora + "', " + "60)", conexion);
                 dr = cmd.ExecuteReader();
                 dr.Close();
 
@@ -235,7 +275,7 @@ namespace CinemexApp
                 tabla.AddHeaderCell(new Cell().Add(new Paragraph(columna).SetFont(fontColumnas)));
             }
 
-            cmd = new SqlCommand("select nombreEmpleado, sala, hora, precio, nombrePelicula from EMPLEADO, VENTAFUNCION, FUNCION, PELICULA where EMPLEADO.idEmpleado = VENTAFUNCION.idEmpleado and VENTAFUNCION.idFuncion = FUNCION.idFuncion and FUNCION.idPelicula = PELICULA.idPelicula", conexion);
+            cmd = new SqlCommand("select nombreEmpleado, sala, hora, precio, nombrePelicula from EMPLEADO, VENTAFUNCION where EMPLEADO.idEmpleado = VENTAFUNCION.idEmpleado", conexion);
             dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -245,6 +285,7 @@ namespace CinemexApp
                 tabla.AddCell(new Cell().Add(new Paragraph(dr["precio"].ToString()).SetFont(fontContenido)));
                 tabla.AddCell(new Cell().Add(new Paragraph(dr["nombrePelicula"].ToString()).SetFont(fontContenido)));
             }
+            dr.Close();
             documento.Add(tabla);
             documento.Close();
         }

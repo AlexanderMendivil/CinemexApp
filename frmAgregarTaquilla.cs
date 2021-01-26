@@ -23,6 +23,7 @@ namespace CinemexApp
         private void frmAgregarTaquilla_Load(object sender, EventArgs e)
         {
             taquilla.LlenarNombreEmpleado(lblEmpleado, DatosEmpleado.idEmpleado);
+            LlenarcmbSala();
         }
 
         #region textbox
@@ -46,13 +47,18 @@ namespace CinemexApp
 
         private void txtDuracion_TextChanged(object sender, EventArgs e)
         {
-            txtSala.Enabled = true;
+            cmbSala.Enabled = true;
         }
 
-        private void txtSala_TextChanged(object sender, EventArgs e)
+        private void cmbSala_SelectedValueChanged(object sender, EventArgs e)
         {
             txtIdioma.Enabled = true;
         }
+
+        /*private void txtSala_TextChanged(object sender, EventArgs e)
+        {
+            txtIdioma.Enabled = true;
+        }*/
 
         private void txtIdioma_TextChanged(object sender, EventArgs e)
         {
@@ -76,7 +82,7 @@ namespace CinemexApp
             try
             {
                 taquilla.Agregar(rand.Next(), txtPelicula.Text, txtGenero.Text, txtAnioPel.Text, txtDirector.Text, txtDuracion.Text,
-                    rand.Next(), txtSala.Text, txtIdioma.Text, txtHora.Text, Convert.ToInt32(txtPrecio.Text));
+                    rand.Next(), cmbSala.SelectedItem.ToString(), txtIdioma.Text, txtHora.Text, Convert.ToInt32(txtPrecio.Text));
                 LimpiarTodo();
             }
             catch (Exception)
@@ -97,7 +103,7 @@ namespace CinemexApp
             txtGenero.Clear();
             txtDirector.Clear();
             txtDuracion.Clear();
-            txtSala.Clear();
+            //txtSala.Clear();
             txtIdioma.Clear();
             txtHora.Clear();
             txtPrecio.Clear();
@@ -106,11 +112,21 @@ namespace CinemexApp
             txtGenero.Enabled = false;
             txtDirector.Enabled = false;
             txtDuracion.Enabled = false;
-            txtSala.Enabled = false;
+            cmbSala.Enabled = false;
             txtIdioma.Enabled = false;
             txtHora.Enabled = false;
             txtPrecio.Enabled = false;
             btnLimpiar.Enabled = false;
+        }
+
+        private void LlenarcmbSala()
+        {
+            cmbSala.Items.Add(1);
+            cmbSala.Items.Add(2);
+            cmbSala.Items.Add(3);
+            cmbSala.Items.Add(4);
+            cmbSala.Items.Add(5);
+            cmbSala.Items.Add(6);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

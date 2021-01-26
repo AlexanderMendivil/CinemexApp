@@ -35,7 +35,6 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtHora = new System.Windows.Forms.TextBox();
             this.lblHora = new System.Windows.Forms.Label();
-            this.txtSala = new System.Windows.Forms.TextBox();
             this.lblSala = new System.Windows.Forms.Label();
             this.lblIdioma = new System.Windows.Forms.Label();
             this.txtAnioPel = new System.Windows.Forms.TextBox();
@@ -53,6 +52,7 @@
             this.pbxLogoCinemex = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbSala = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogoCinemex)).BeginInit();
             this.SuspendLayout();
@@ -71,12 +71,12 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
+            this.groupBox1.Controls.Add(this.cmbSala);
             this.groupBox1.Controls.Add(this.txtIdioma);
             this.groupBox1.Controls.Add(this.txtPrecio);
             this.groupBox1.Controls.Add(this.lblPrecio);
             this.groupBox1.Controls.Add(this.txtHora);
             this.groupBox1.Controls.Add(this.lblHora);
-            this.groupBox1.Controls.Add(this.txtSala);
             this.groupBox1.Controls.Add(this.lblSala);
             this.groupBox1.Controls.Add(this.lblIdioma);
             this.groupBox1.Controls.Add(this.txtAnioPel);
@@ -145,15 +145,6 @@
             this.lblHora.Size = new System.Drawing.Size(40, 17);
             this.lblHora.TabIndex = 29;
             this.lblHora.Text = "Hora:";
-            // 
-            // txtSala
-            // 
-            this.txtSala.Enabled = false;
-            this.txtSala.Location = new System.Drawing.Point(309, 34);
-            this.txtSala.Name = "txtSala";
-            this.txtSala.Size = new System.Drawing.Size(136, 25);
-            this.txtSala.TabIndex = 28;
-            this.txtSala.TextChanged += new System.EventHandler(this.txtSala_TextChanged);
             // 
             // lblSala
             // 
@@ -318,6 +309,16 @@
             this.panel1.Size = new System.Drawing.Size(200, 1);
             this.panel1.TabIndex = 34;
             // 
+            // cmbSala
+            // 
+            this.cmbSala.Enabled = false;
+            this.cmbSala.FormattingEnabled = true;
+            this.cmbSala.Location = new System.Drawing.Point(309, 34);
+            this.cmbSala.Name = "cmbSala";
+            this.cmbSala.Size = new System.Drawing.Size(136, 25);
+            this.cmbSala.TabIndex = 34;
+            this.cmbSala.SelectedValueChanged += new System.EventHandler(this.cmbSala_SelectedValueChanged);
+            // 
             // frmAgregarTaquilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,9 +366,9 @@
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtHora;
         private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.TextBox txtSala;
         private System.Windows.Forms.Label lblSala;
         private System.Windows.Forms.Label lblIdioma;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cmbSala;
     }
 }

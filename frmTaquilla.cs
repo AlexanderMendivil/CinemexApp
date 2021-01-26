@@ -30,7 +30,7 @@ namespace CinemexApp
             InitializeComponent();
         }
 
-        SqlConnection conexion;
+        //SqlConnection conexion;
         ConexionTaquilla taquilla = new ConexionTaquilla();
 
         private void frmTaquilla_Load(object sender, EventArgs e)
@@ -79,16 +79,26 @@ namespace CinemexApp
         {
             try
             {
-                dgvTaquilla.Rows.Add(cmbPelícula.SelectedItem.ToString(),
-                cmbIdioma.SelectedItem.ToString(),
-                cmbFuncion.SelectedItem.ToString(), txtCantidad.Text,
-                taquilla.Comprar(cmbPelícula.SelectedItem.ToString(),
-                Convert.ToInt32(txtCantidad.Text)));
-                taquilla.LlenarCompra(cmbPelícula.SelectedItem.ToString());
-                sumaTotal = sumaTotal + Convert.ToInt32(taquilla.Comprar(cmbPelícula.SelectedItem.ToString(),
-                    Convert.ToInt32(txtCantidad.Text)));
-                btnCompraFinal.Enabled = true;
-                btnLimpiarDgv.Enabled = true;
+                string preciofinal = taquilla.Comprar
+                    (cmbPelícula.SelectedItem.ToString(), 
+                    Convert.ToInt32(txtCantidad.Text));
+
+                bool band = taquilla.LlenarCompra(cmbPelícula.SelectedItem.ToString(),
+                    cmbIdioma.SelectedItem.ToString(), cmbFuncion.SelectedItem.ToString(),
+                    preciofinal, Convert.ToInt32(txtCantidad.Text));
+
+                if (band)
+                {
+                    dgvTaquilla.Rows.Add(cmbPelícula.SelectedItem.ToString(),
+                    cmbIdioma.SelectedItem.ToString(),
+                    cmbFuncion.SelectedItem.ToString(), txtCantidad.Text,
+                    preciofinal);
+
+                    sumaTotal = sumaTotal + Convert.ToInt32(taquilla.Comprar(cmbPelícula.SelectedItem.ToString(),
+                        Convert.ToInt32(txtCantidad.Text)));
+                    btnCompraFinal.Enabled = true;
+                    btnLimpiarDgv.Enabled = true;
+                }
                 LimpiarTodo();
             }
             catch (Exception)

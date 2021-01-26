@@ -165,7 +165,7 @@
             // 
             // pnlChildForms
             // 
-            this.pnlChildForms.BackColor = System.Drawing.Color.Transparent;
+            this.pnlChildForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.pnlChildForms.Controls.Add(this.lblError);
             this.pnlChildForms.Controls.Add(this.btnIngresarPlataforma);
             this.pnlChildForms.Controls.Add(this.pnl2);

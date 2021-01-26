@@ -106,7 +106,7 @@
             // 
             // pnlChildForms
             // 
-            this.pnlChildForms.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlChildForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.pnlChildForms.Controls.Add(this.btnReporteDulceria);
             this.pnlChildForms.Controls.Add(this.btnReporteTaquilla);
             this.pnlChildForms.Controls.Add(this.pnlBotonesCartelera);
@@ -288,7 +288,7 @@
             // 
             // pbTaquilla
             // 
-            this.pbTaquilla.BackColor = System.Drawing.Color.Gainsboro;
+            this.pbTaquilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
             this.pbTaquilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbTaquilla.Image = global::CinemexApp.Properties.Resources.cartelera;
             this.pbTaquilla.Location = new System.Drawing.Point(120, 131);
