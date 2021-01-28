@@ -23,9 +23,9 @@ namespace CinemexApp
 
         const int GRIP_SIZE = 15;
 
-        //string cadenaConexion = "Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True";
+        string cadenaConexion = "Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True";
         //string cadenaConexion = "Data Source=DESKTOP-EAET5MJ;Initial Catalog=CINEMEX;Integrated Security=True";
-        string cadenaConexion = "Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True";
+        //string cadenaConexion = "Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True";
 
         public Login()
         {

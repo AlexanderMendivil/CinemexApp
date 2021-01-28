@@ -28,9 +28,9 @@ namespace CinemexApp
         {
             try
             {
-                //conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=LAPTOP-R35S94BS;Initial Catalog=CINEMEX;Integrated Security=True");
                 //conexion = new SqlConnection("Data Source=DESKTOP-EAET5MJ;Initial Catalog=CINEMEX;Integrated Security=True");
-                conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
+                //conexion = new SqlConnection("Data Source=DESKTOP-UMHCMCU;Initial Catalog=CINEMEX;Integrated Security=True");
                 conexion.Open();
             }
             catch (Exception ex)
@@ -257,7 +257,7 @@ namespace CinemexApp
 
         public void CrearPDF()
         {
-            PdfWriter pdfWriter = new PdfWriter("REPORTE_TAQUILLA.PDF");
+            PdfWriter pdfWriter = new PdfWriter(@"C:\Users\alexa\OneDrive\Escritorio\REPORTE_TAQUILLA.PDF");
             PdfDocument pdf = new PdfDocument(pdfWriter);
             Document documento = new Document(pdf, PageSize.LETTER);
 
