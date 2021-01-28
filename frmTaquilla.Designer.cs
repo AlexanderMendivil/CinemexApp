@@ -52,6 +52,10 @@
             this.btnLimpiarDgv = new System.Windows.Forms.Button();
             this.btnCompraFinal = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtPago = new System.Windows.Forms.TextBox();
+            this.lblPago = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogoCinemex)).BeginInit();
             this.gbxPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaquilla)).BeginInit();
@@ -304,12 +308,59 @@
             this.panel1.Size = new System.Drawing.Size(300, 1);
             this.panel1.TabIndex = 21;
             // 
+            // txtPago
+            // 
+            this.txtPago.Enabled = false;
+            this.txtPago.Location = new System.Drawing.Point(630, 332);
+            this.txtPago.Name = "txtPago";
+            this.txtPago.Size = new System.Drawing.Size(76, 20);
+            this.txtPago.TabIndex = 23;
+            this.txtPago.TextChanged += new System.EventHandler(this.txtPago_TextChanged);
+            // 
+            // lblPago
+            // 
+            this.lblPago.AutoSize = true;
+            this.lblPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPago.ForeColor = System.Drawing.Color.White;
+            this.lblPago.Location = new System.Drawing.Point(436, 333);
+            this.lblPago.Name = "lblPago";
+            this.lblPago.Size = new System.Drawing.Size(188, 16);
+            this.lblPago.TabIndex = 22;
+            this.lblPago.Text = "Indique con cuánto va a pagar";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(630, 125);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(76, 20);
+            this.txtTotal.TabIndex = 25;
+            this.txtTotal.Text = "0";
+            this.txtTotal.Visible = false;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(585, 129);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(39, 16);
+            this.lblTotal.TabIndex = 24;
+            this.lblTotal.Text = "Total";
+            this.lblTotal.Visible = false;
+            // 
             // frmTaquilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(901, 360);
+            this.ClientSize = new System.Drawing.Size(901, 370);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.txtPago);
+            this.Controls.Add(this.lblPago);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLimpiarDgv);
             this.Controls.Add(this.btnCompraFinal);
@@ -360,5 +411,9 @@
         private System.Windows.Forms.Button btnLimpiarDgv;
         private System.Windows.Forms.Button btnCompraFinal;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtPago;
+        private System.Windows.Forms.Label lblPago;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label lblTotal;
     }
 }

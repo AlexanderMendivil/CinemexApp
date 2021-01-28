@@ -70,19 +70,14 @@ namespace CinemexApp
                 dulceria.LlenarCompra(cmbDulce.SelectedItem.ToString(), precioFinal, cmbTipoDeDulce.SelectedItem.ToString());
 
                 sumaTotal = sumaTotal + Convert.ToInt32(dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text)));
-                btnCompraFinal.Enabled = true;
+                txtPago.Enabled = true;
                 btnLimpiarDgv.Enabled = true;
-                //dulceria.Comprar(cmbDulce.SelectedItem.ToString(), Convert.ToInt32(txtCantidad.Text));
-                cmbTipoDeDulce.Items.Clear();
-                //dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
-                cmbDulce.Items.Clear();
-                txtMarca.Clear();
-                txtCantidad.Clear();
-                cmbDulce.Enabled = false;
-                txtCantidad.Enabled = false;
-                txtMarca.Enabled = false;
-                btnComprar.Enabled = false;
-                btnLimpiar.Enabled = false;
+
+                Limpiar();
+
+                lblTotal.Visible = true;
+                txtTotal.Visible = true;
+                txtTotal.Text = sumaTotal.ToString();
             }
             catch (Exception)
             {
@@ -93,16 +88,7 @@ namespace CinemexApp
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            cmbTipoDeDulce.Items.Clear();
-            //dulceria.LlenarItemsTipoDulce(cmbTipoDeDulce);
-            cmbDulce.Items.Clear();
-            txtMarca.Clear();
-            txtCantidad.Clear();
-            cmbDulce.Enabled = false;
-            txtCantidad.Enabled = false;
-            txtMarca.Enabled = false;
-            btnComprar.Enabled = false;
-            btnLimpiar.Enabled = false;
+            Limpiar();
         }
 
         private void cmbTipoDeDulce_Click(object sender, EventArgs e)
@@ -119,6 +105,7 @@ namespace CinemexApp
         private void btnLimpiarDgv_Click(object sender, EventArgs e)
         {
             dgvDulces.Rows.Clear();
+            LimpiarTotal();
             sumaTotal = 0;
             btnCompraFinal.Enabled = false;
             btnLimpiarDgv.Enabled = false;
@@ -126,11 +113,59 @@ namespace CinemexApp
 
         private void btnCompraFinal_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Compra realizada por $"+sumaTotal+" pesos");
+            MessageBox.Show("Compra realizada por $"+sumaTotal+" pesos"
+                + "\n"
+                + "\nPagó con $" + txtPago.Text + " pesos"
+                + "\n"
+                + "\nSu cambio es de $" + (Convert.ToInt32(txtPago.Text) - sumaTotal) + " pesos");
             dgvDulces.Rows.Clear();
+            LimpiarTotal();
             sumaTotal = 0;
             btnCompraFinal.Enabled = false;
             btnLimpiarDgv.Enabled = false;
+        }
+
+        private void Limpiar()
+        {
+            cmbTipoDeDulce.Items.Clear();
+            cmbDulce.Items.Clear();
+            txtMarca.Clear();
+            txtCantidad.Clear();
+            cmbDulce.Enabled = false;
+            txtCantidad.Enabled = false;
+            txtMarca.Enabled = false;
+            btnComprar.Enabled = false;
+            btnLimpiar.Enabled = false;
+        }
+
+        private void txtPago_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPago.Text != "")
+            {
+                try
+                {
+                    if (Convert.ToInt32(txtPago.Text) > Convert.ToInt32(txtTotal.Text))
+                    {
+                        btnCompraFinal.Enabled = true;
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ingrese la cantidad con un número entero");
+                    txtPago.Clear();
+                    btnCompraFinal.Enabled = false;
+                }
+            }
+        }
+
+        private void LimpiarTotal()
+        {
+            lblTotal.Visible = false;
+            txtTotal.Visible = false;
+            txtTotal.Text = "0";
+
+            txtPago.Clear();
+            txtPago.Enabled = false;
         }
     }
 }

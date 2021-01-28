@@ -96,9 +96,14 @@ namespace CinemexApp
 
                     sumaTotal = sumaTotal + Convert.ToInt32(taquilla.Comprar(cmbPelícula.SelectedItem.ToString(),
                         Convert.ToInt32(txtCantidad.Text)));
-                    btnCompraFinal.Enabled = true;
+                    txtPago.Enabled = true;
                     btnLimpiarDgv.Enabled = true;
                 }
+
+                lblTotal.Visible = true;
+                txtTotal.Visible = true;
+                txtTotal.Text = (Convert.ToInt32(txtTotal.Text) + Convert.ToInt32(preciofinal)).ToString();
+
                 LimpiarTodo();
             }
             catch (Exception)
@@ -129,16 +134,30 @@ namespace CinemexApp
 
         private void btnCompraFinal_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Compra realizada por $" + sumaTotal + " pesos");
-            dgvTaquilla.Rows.Clear();
-            sumaTotal = 0;
-            btnCompraFinal.Enabled = false;
-            btnLimpiarDgv.Enabled = false;
+            try
+            {
+                MessageBox.Show("Compra realizada por $" + sumaTotal + " pesos"
+                + "\n"
+                + "\nPagó con $" + txtPago.Text + " pesos"
+                + "\n"
+                + "\nSu cambio es de $" + (Convert.ToInt32(txtPago.Text) - sumaTotal) + " pesos");
+                dgvTaquilla.Rows.Clear();
+                LimpiarTotal();
+                sumaTotal = 0;
+                btnCompraFinal.Enabled = false;
+                btnLimpiarDgv.Enabled = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Indique con cuánto va a pagar el cliente");
+            }
+            
         }
 
         private void btnLimpiarDgv_Click(object sender, EventArgs e)
         {
             dgvTaquilla.Rows.Clear();
+            LimpiarTotal();
             sumaTotal = 0;
             btnCompraFinal.Enabled = false;
             btnLimpiarDgv.Enabled = false;
@@ -153,6 +172,36 @@ namespace CinemexApp
         {
             cmbPelícula.Items.Clear();
             taquilla.LlenarItemsPelicula(cmbPelícula);
+        }
+
+        private void LimpiarTotal()
+        {
+            lblTotal.Visible = false;
+            txtTotal.Visible = false;
+            txtTotal.Text = "0";
+
+            txtPago.Clear();
+            txtPago.Enabled = false;
+        }
+
+        private void txtPago_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPago.Text != "")
+            {
+                try
+                {
+                    if (Convert.ToInt32(txtPago.Text) > Convert.ToInt32(txtTotal.Text))
+                    {
+                        btnCompraFinal.Enabled = true;
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ingrese la cantidad con un número entero");
+                    txtPago.Clear();
+                    btnCompraFinal.Enabled = false;
+                }
+            }
         }
     }
 }

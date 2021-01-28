@@ -143,14 +143,12 @@ namespace CinemexApp
                 if (dr.Read())
                 {
                     precioFinal = cant * Convert.ToInt32(dr["precio"].ToString());
-                    //MessageBox.Show("Se compraron " + cant + " " + nombreDulce + " por $" + precioFinal + " pesos");
                 }
                 dr.Close();
                 return precioFinal.ToString();
             }
             catch (Exception)
             {
-                //MessageBox.Show("No se pudo realizar la compra " + ex.ToString());
                 return "";
             }
         }

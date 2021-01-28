@@ -107,7 +107,6 @@ namespace CinemexApp
             txtIdioma.Clear();
             txtHora.Clear();
             txtPrecio.Clear();
-            txtPelicula.Enabled = false;
             txtAnioPel.Enabled = false;
             txtGenero.Enabled = false;
             txtDirector.Enabled = false;
